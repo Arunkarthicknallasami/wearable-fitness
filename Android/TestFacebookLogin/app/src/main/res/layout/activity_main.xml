@@ -11,18 +11,84 @@
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal" />
 
     <TextView
-        android:id="@+id/token_value"
+        android:id="@+id/logon_status"
         android:layout_below="@+id/login_button"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="" />
+
+    <TextView
+        android:id="@+id/token_value"
+        android:layout_below="@+id/logon_status"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/graph_api"
+        android:layout_below="@+id/token_value"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:inputType="text"
+        android:textColor="@color/com_facebook_button_text_color"
+        android:background="@color/com_facebook_button_background_color_selected"
+        android:textColorHint="@color/com_facebook_button_text_color"
+        android:text="/me/friends"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/submit_graph_path_request"
+        android:layout_below="@+id/graph_api"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="submit path request"
+        android:background="@color/com_facebook_button_background_color_pressed"
+        android:textColor="@color/com_facebook_button_text_color"
+        android:textSize="@dimen/com_facebook_likeview_text_size"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/submit_graph_me_request"
+        android:layout_below="@+id/submit_graph_path_request"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="submit me request"
+        android:background="@color/com_facebook_button_background_color_pressed"
+        android:textColor="@color/com_facebook_button_text_color"
+        android:textSize="@dimen/com_facebook_likeview_text_size"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/graph_response"
+        android:layout_below="@+id/submit_graph_me_request"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:visibility="invisible" />
+
 
 </RelativeLayout>
