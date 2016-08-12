@@ -1,3 +1,31 @@
+/**
+ * MainActivity.java
+ * Single-Page Android App integrated native facebook android SDK v4.14.1 and facebook Graph API v2.7,
+ * - supports logon with user's facebook a/c
+ * - supports access of user's profile using the session access token granted
+ *   after logon
+ *
+ * Created by Jeffrey Garcia on 8/7/16.
+ * Copyright © 2016 Jeffrey Garcia. All rights reserved.
+ *
+ * Pre-requisite
+ * - enable push notification capability of the app in Xcode
+ * - create both dev/prod certificate of the target app ID in Apple Developer Website
+ * - download the certificates, import to Keychain then export the P12 file
+ * - run the app in device to obtain the device Token from debug loggings
+ * - the P12 file will be needed to authenticate the request with APNS while the device
+ *   token will be needed to route the notification to the device
+ *
+ * Reference:
+ * https://developers.facebook.com/apps/
+ * https://developers.facebook.com/docs/facebook-login/android
+ * https://developers.facebook.com/docs/facebook-login/android/accesstokens
+ * https://developers.facebook.com/docs/facebook-login/android/permissions
+ * https://developers.facebook.com/docs/facebook-login/permissions/#reference-public_profile
+ * https://developers.facebook.com/docs/android/graph
+ * https://developers.facebook.com/docs/reference/android/current/class/GraphRequest/
+ * https://developers.facebook.com/tools/explorer
+ */
 package com.jeffrey.mobile.testfacebooklogin;
 
 import android.content.Intent;
