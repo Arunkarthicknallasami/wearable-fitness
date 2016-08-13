@@ -22,3 +22,17 @@ This would includes the development at least the following components: <br/>
 - https://developers.google.com/identity/protocols/OAuth2 <br/>
 - https://developers.google.com/oauthplayground/ <br/>
 
+<br/>
+
+<b>Google Fit API</b>
+- https://developers.google.com/fit/android/?hl=zh-TW <br/>
+- https://developers.google.com/fit/android/get-started?hl=zh-TW#step_5_connect_to_the_fitness_service <br/>
+- https://developers.google.com/fit/android/authorization <br/>
+- https://developers.google.com/android/guides/api-client <br/>
+- https://developers.google.com/fit/android/samples <br/>
+- https://developers.google.com/android/guides/http-auth <br/>
+- https://developers.google.com/android/guides/api-client#access_the_wearable_api <br/>
+ 
+
+
+
