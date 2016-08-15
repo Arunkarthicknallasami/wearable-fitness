@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "com.jeffrey.mobile.fit"
+        minSdkVersion 18
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        debug {
+            //use different file-separator depends you're building on OSX or Windows
+            storeFile file("/Users/jeffrey/.android/debug.keystore")
+            //storeFile file("C:\\Users\\20710206\\.android\\debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+        release {
+            //use different file-separator depends you're building on OSX or Windows
+            storeFile file("/Users/jeffrey/.android/jeffrey.keystore")
+            //storeFile file("C:\\Users\\20710206\\.android\\jeffrey.keystore")
+            storePassword "android"
+            keyAlias "android"
+            keyPassword "android"
+        }
+    }
+
+    buildTypes {
+        // Google fit "connected" app MUST be signed with the same certificate and package name registered in the Google API console
+        // otherwise connection will be declined
+        release {
+            // enable use of proguard for release build
+            minifyEnabled false
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //add specific signing configuration for release
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+
+            //add specific signing configuration for debugs
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support:appcompat-v7:24.0.0-alpha2'
+    compile 'com.android.support:design:24.0.0-alpha2'
+
+    compile 'com.google.android.gms:play-services-fitness:9.4.0'
+}
