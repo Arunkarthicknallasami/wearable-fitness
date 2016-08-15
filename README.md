@@ -49,3 +49,18 @@ This would includes the development at least the following components: <br/>
 - https://developers.google.com/android/guides/http-auth <br/>
 - https://developers.google.com/android/guides/api-client#access_the_wearable_api <br/>
 - https://support.google.com/fit/?hl=en#6075067 <br/> 
+
+<br/>
+
+<b>Push Notification for Wearable</b>
+- https://developer.android.com/wear/index.html <br/>
+- https://developer.android.com/training/building-wearables.html <br/>
+- https://developer.android.com/training/wearables/apps/creating.html <br/>
+- https://developer.android.com/training/wearables/notifications/creating.html <br/>
+- http://android-developers.blogspot.hk/2016/05/android-wear-20-developer-preview.html <br/>
+- http://android-developers.blogspot.hk/2016/07/android-wear-20-developer-preview-2.html <br/>
+- https://developer.android.com/wear/preview/features/notifications.html <br/>
+
+<br/>
+
+
