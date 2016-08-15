@@ -13,7 +13,7 @@ This would includes the development at least the following components: <br/>
 7. fitness data synchronization (daily sync) with cloud via the restful web service call
 8. background service in mobile app to generate local notification based on the rules pushed by the server-side rule engines
 9. remote push notification in mobile app to support both platform's built-in push framework (Apple APNS, Google GCM), and 3rd party push SDK (Baidu)
-10. bridged notifications, such as new message notifications, are pushed (sync'ed) to the wearable from the connected handheld using standard platform API and require very little or no Wear-specific code. (Except for wearable devices on Android, where Samsung Gear is running Tizen OS instead of Android Wear OS)
+10. bridged notifications, such as new message notifications, are pushed (sync'ed) to the wearable from the connected handheld using standard platform API and require very little or no Wear-specific code. Need special precaution of wearable devices running Tizen OS (Samsung Gear watches) instead of Android Wear OS.
 
 # References:
 
@@ -60,7 +60,17 @@ This would includes the development at least the following components: <br/>
 - http://android-developers.blogspot.hk/2016/05/android-wear-20-developer-preview.html <br/>
 - http://android-developers.blogspot.hk/2016/07/android-wear-20-developer-preview-2.html <br/>
 - https://developer.android.com/wear/preview/features/notifications.html <br/>
+- http://www.samsung.com/us/support/answer/ANS00032965/ <br/>
 
 <br/>
 
+<b>Samsung S-Health SDK</b>
+- http://shealth.samsung.com/ <br/>
+- http://developer.samsung.com/health <br/>
 
+<br/>
+
+<b>Baidu Push Notification SDK</b>
+- https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-baidu-china-android-notifications-get-started/ <br/>
+
+<br/>
