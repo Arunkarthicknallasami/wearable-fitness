@@ -24,6 +24,21 @@ This would includes the development at least the following components: <br/>
 
 <br/>
 
+<b>Facebook Mobile SDK for Android</b>
+-  https://developers.facebook.com/quickstarts/ <br/>
+-  https://developers.facebook.com/docs/facebook-login/permissions/#reference-public_profile <br/>
+-  https://developers.facebook.com/docs/facebook-login/access-tokens <br/>
+-  https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension <br/>
+-  https://developers.facebook.com/apps/ <br/>
+-  https://developers.facebook.com/docs/facebook-login/android <br/>
+-  https://developers.facebook.com/docs/facebook-login/android/accesstokens <br/>
+-  https://developers.facebook.com/docs/facebook-login/android/permissions <br/>
+-  https://developers.facebook.com/docs/android/graph <br/>
+-  https://developers.facebook.com/docs/reference/android/current/class/GraphRequest/ <br/>
+-  https://developers.facebook.com/tools/explorer <br/>
+
+<br/>
+
 <b>Google Fit API</b>
 - https://developers.google.com/fit/android/?hl=zh-TW <br/>
 - https://developers.google.com/fit/android/get-started?hl=zh-TW#step_5_connect_to_the_fitness_service <br/>
@@ -33,6 +48,3 @@ This would includes the development at least the following components: <br/>
 - https://developers.google.com/android/guides/http-auth <br/>
 - https://developers.google.com/android/guides/api-client#access_the_wearable_api <br/>
  
-
-
-
