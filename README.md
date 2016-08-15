@@ -8,11 +8,12 @@ This would includes the development at least the following components: <br/>
 2. A java-based backend system which process the rule-engine and interface with the oracle database <br/>
 3. An authentication & authorization system to provide identity management (using OAuth2.0 authorization framework) and access control to the webservice <br/>
 4. Integration with social website (i.e. facebook) with the mobile app (iOS and Android)
-5. fitness device (Apple Watch, Android Wear, or even the iPhone or Android phone itself) pairing with the mobile app (iOS and Android)
+5. fitness device (Apple Watch, Android Wear, or even the iPhone or Android phone itself) pairing with the mobile app (iOS and Android) and life-cycle management (device switching)
 6. fitness data aggregation from fitness device to mobile app (HealthKit SDK on iOS, Google FIT API / Samsung S Health API on Android)
-7. fitness data synchronization (daily sync) with cloud via the web service
+7. fitness data synchronization (daily sync) with cloud via the restful web service call
 8. background service in mobile app to generate local notification based on the rules pushed by the server-side rule engines
 9. remote push notification in mobile app to support both platform's built-in push framework (Apple APNS, Google GCM), and 3rd party push SDK (Baidu)
+10. push notification synchronization from handheld devices (Android phone) to wearable (Android Wear, Samsung Gear) that could be running different operating systems (Samsung Gear is running on Tizen)
 
 # References:
 
