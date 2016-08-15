@@ -47,4 +47,4 @@ This would includes the development at least the following components: <br/>
 - https://developers.google.com/fit/android/samples <br/>
 - https://developers.google.com/android/guides/http-auth <br/>
 - https://developers.google.com/android/guides/api-client#access_the_wearable_api <br/>
- 
+- https://support.google.com/fit/?hl=en#6075067 <br/> 
