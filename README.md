@@ -13,7 +13,7 @@ This would includes the development at least the following components: <br/>
 7. fitness data synchronization (daily sync) with cloud via the restful web service call
 8. background service in mobile app to generate local notification based on the rules pushed by the server-side rule engines
 9. remote push notification in mobile app to support both platform's built-in push framework (Apple APNS, Google GCM), and 3rd party push SDK (Baidu)
-10. push notification synchronization from handheld devices (Android phone) to wearable (Android Wear, Samsung Gear) that could be running different operating systems (Samsung Gear is running on Tizen)
+10. bridged notifications, such as new message notifications, are pushed (sync'ed) to the wearable from the connected handheld using standard platform API and require very little or no Wear-specific code. (Except for wearable devices on Android, where Samsung Gear is running Tizen OS instead of Android Wear OS)
 
 # References:
 
