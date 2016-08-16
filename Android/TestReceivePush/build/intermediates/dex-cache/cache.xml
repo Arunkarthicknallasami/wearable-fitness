@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.4.0_66dcfe016a666cfc0c76bb3af72ef7cd99be08a4.jar" />
+    </item>
+    <item
+        jar="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_ce540ab73a4c58c9288228fc7a0a0fbba6686d5b.jar" />
+    </item>
+    <item
+        jar="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.4.0_f428553703c885fe4b013fa190b8f59ab9d30733.jar" />
+    </item>
+    <item
+        jar="/Users/jeffrey/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_55dddebc0f3ce7cc8607966d0dde59270c7e554c.jar" />
+    </item>
+    <item
+        jar="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
+        <dex dex="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-9.4.0_843289239407021c30706df91cc7a0cfdee66dfb.jar" />
+    </item>
+    <item
+        jar="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_26e5ac87ecaddad1e57a9871aa285aefdbd8a1d8.jar" />
+    </item>
+    <item
+        jar="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.4.0_cfeb090bd33b43643999acb40de72b15d91ed1da.jar" />
+    </item>
+    <item
+        jar="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
+        <dex dex="/Users/jeffrey/Development/Android/android_studio_workspace_manulife/TestReceivePush/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-9.4.0_3aa601942004e52215c74b54a547e035db48328d.jar" />
+    </item>
+
+</items>

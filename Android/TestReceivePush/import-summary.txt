@@ -1,0 +1,123 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* ic_launcher-web.png
+* pom.xml
+* target/
+* target/TestReceivePush-1.1.ap_
+* target/TestReceivePush-1.1.apk
+* target/TestReceivePush-1.1.jar
+* target/classes.dex
+* target/classes/
+* target/classes/com/
+* target/classes/com/example/
+* target/classes/com/example/testreceivepush/
+* target/classes/com/example/testreceivepush/BuildConfig.class
+* target/classes/com/example/testreceivepush/GCMInstanceIDListenerService.class
+* target/classes/com/example/testreceivepush/GCMListenerService.class
+* target/classes/com/example/testreceivepush/GCMRegistrationService.class
+* target/classes/com/example/testreceivepush/MainActivity.class
+* target/classes/com/example/testreceivepush/Manifest$permission.class
+* target/classes/com/example/testreceivepush/Manifest.class
+* target/classes/com/example/testreceivepush/R$attr.class
+* target/classes/com/example/testreceivepush/R$dimen.class
+* target/classes/com/example/testreceivepush/R$drawable.class
+* target/classes/com/example/testreceivepush/R$integer.class
+* target/classes/com/example/testreceivepush/R$layout.class
+* target/classes/com/example/testreceivepush/R$menu.class
+* target/classes/com/example/testreceivepush/R$string.class
+* target/classes/com/example/testreceivepush/R.class
+* target/filtered-manifest/
+* target/filtered-manifest/AndroidManifest.xml
+* target/filtered-res/
+* target/filtered-res/drawable-hdpi/
+* target/filtered-res/drawable-hdpi/ic_launcher.png
+* target/filtered-res/drawable-mdpi/
+* target/filtered-res/drawable-mdpi/ic_launcher.png
+* target/filtered-res/drawable-xhdpi/
+* target/filtered-res/drawable-xhdpi/ic_launcher.png
+* target/filtered-res/drawable-xxhdpi/
+* target/filtered-res/drawable-xxhdpi/ic_launcher.png
+* target/filtered-res/layout/
+* target/filtered-res/layout/activity_main.xml
+* target/filtered-res/menu/
+* target/filtered-res/menu/main.xml
+* target/filtered-res/values-v11/
+* target/filtered-res/values-v11/styles.xml
+* target/filtered-res/values-v14/
+* target/filtered-res/values-v14/styles.xml
+* target/filtered-res/values-w820dp/
+* target/filtered-res/values-w820dp/dimens.xml
+* target/filtered-res/values/
+* target/filtered-res/values/dimens.xml
+* target/filtered-res/values/integers.xml
+* target/filtered-res/values/strings.xml
+* target/filtered-res/values/styles.xml
+* target/generated-sources/
+* target/generated-sources/r/
+* target/generated-sources/r/com/
+* target/generated-sources/r/com/example/
+* target/generated-sources/r/com/example/testreceivepush/
+* target/generated-sources/r/com/example/testreceivepush/BuildConfig.java
+* target/generated-sources/r/com/example/testreceivepush/Manifest.java
+* target/generated-sources/r/com/example/testreceivepush/R.java
+* target/maven-archiver/
+* target/maven-archiver/pom.properties
+* target/proguard-obfuscated.jar
+* target/proguard/
+* target/proguard/dump.txt
+* target/proguard/mapping.txt
+* target/proguard/seeds.txt
+* target/proguard/usage.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets
+* libs/play-services-ads-8.1.0.jar => app/libs/play-services-ads-8.1.0.jar
+* libs/play-services-analytics-8.1.0.jar => app/libs/play-services-analytics-8.1.0.jar
+* libs/play-services-appindexing-8.1.0.jar => app/libs/play-services-appindexing-8.1.0.jar
+* libs/play-services-base-8.1.0.jar => app/libs/play-services-base-8.1.0.jar
+* libs/play-services-basement-8.1.0.jar => app/libs/play-services-basement-8.1.0.jar
+* libs/play-services-gcm-8.1.0.jar => app/libs/play-services-gcm-8.1.0.jar
+* libs/play-services-measurement-8.1.0.jar => app/libs/play-services-measurement-8.1.0.jar
+* proguard.cfg => app/proguard.cfg
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
