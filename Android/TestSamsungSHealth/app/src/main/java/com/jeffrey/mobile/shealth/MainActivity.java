@@ -256,24 +256,24 @@ public class MainActivity extends AppCompatActivity {
          */
         if (Looper.myLooper() == null) {
             throw new IllegalThreadStateException("No looper for this thread");
+        }
 
-        } else if (Looper.myLooper() == Looper.getMainLooper()) {
+        final HealthDataResolver.ReadRequest request = createReadRequest();
+        HealthDataResolver resolver = new HealthDataResolver(mSHealthDataStore, null);
+
+        if (Looper.myLooper() == Looper.getMainLooper()) {
             Log.d(TAG, "In the Main (UI) Thread");
-            getStepCount_Async();
+            getStepCount_Async(request, resolver);
 
         } else {
             Log.d(TAG, "In the Looper Thread");
-            getStepCount_Sync();
+            getStepCount_Sync(request, resolver);
         }
     }
 
-    protected void getStepCount_Async() {
-        final HealthDataResolver.ReadRequest readRequest = createReadRequest();
-
-        HealthDataResolver resolver = new HealthDataResolver(mSHealthDataStore, null);
-
+    protected void getStepCount_Async(HealthDataResolver.ReadRequest request, HealthDataResolver resolver) {
         // Sets the callback to get the result asynchronously.
-        resolver.read(readRequest).setResultListener(new HealthResultHolder.ResultListener<HealthDataResolver.ReadResult>() {
+        resolver.read(request).setResultListener(new HealthResultHolder.ResultListener<HealthDataResolver.ReadResult>() {
             @Override
             public void onResult(HealthDataResolver.ReadResult readResult) {
                 printData(readResult);
@@ -281,14 +281,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    protected void getStepCount_Sync() {
-        final HealthDataResolver.ReadRequest readRequest = createReadRequest();
-
-        HealthDataResolver resolver = new HealthDataResolver(mSHealthDataStore, null);
-
+    protected void getStepCount_Sync(HealthDataResolver.ReadRequest request, HealthDataResolver resolver) {
         // Blocks the thread until the task is completed.
-        HealthDataResolver.ReadResult readResult = resolver.read(readRequest).await();
-
+        HealthDataResolver.ReadResult readResult = resolver.read(request).await();
         printData(readResult);
     }
 
