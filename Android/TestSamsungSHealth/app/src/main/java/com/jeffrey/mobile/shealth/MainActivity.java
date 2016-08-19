@@ -92,7 +92,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        mSHealthDataStore.disconnectService();
+        if (mSHealthDataService != null && mSHealthDataStore != null) {
+            Log.d(TAG, "Disconnecting S Health Data Service ...");
+            mSHealthDataStore.disconnectService();
+        }
         super.onDestroy();
     }
 
@@ -119,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initializeSHealth() {
-        Log.d(TAG, "Initialize Health Data Service ...");
+        Log.d(TAG, "Initialize S Health Data Service ...");
         mSHealthDataService = new HealthDataService();
         try {
             mSHealthDataService.initialize(this);
