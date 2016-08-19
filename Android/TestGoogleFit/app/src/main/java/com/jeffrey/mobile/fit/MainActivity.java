@@ -1,14 +1,19 @@
 package com.jeffrey.mobile.fit;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Looper;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -18,8 +23,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.Scopes;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.fitness.Fitness;
 import com.google.android.gms.fitness.data.Bucket;
@@ -47,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
 
     protected TextView content_text;
 
+    // For manual connection management and error resolving
+    protected static final int REQUEST_RESOLVE_ERROR = 1001;
+
+    // Unique tag for the error dialog fragment
+    private static final String REQUEST_RESOLVE_ERROR_DIALOG = "dialog_error";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (mGoogleApiClient == null) {
-
                     if (!checkNetworkStatus()) {
                         /**
                          * Flow to network settings and abort the building of Google Fit if no
@@ -72,51 +83,44 @@ public class MainActivity extends AppCompatActivity {
                          */
                         content_text.setText("No network");
                         Snackbar.make(view, "Network connection is not available", Snackbar.LENGTH_SHORT)
-                                .setAction("Action", null).show();
+                                .setAction("Settings", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        // launch to wifi settings page
+                                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                                    }
+                                }).show();
                         return;
                     }
-
-                    Log.d(TAG, "Building Google Fit API client ...");
-
-                    // clear all previous contents
-                    content_text.setText("");
-
-                    Snackbar.make(view, "Building Google Fit API client ...", Snackbar.LENGTH_SHORT)
-                            .setAction("Action", null).show();
-
                     buildFitnessClient();
 
-                } else if (mGoogleApiClient.isConnected()) {
-                    Log.d(TAG, "Disconnect from Google Play Services.");
-
-                    // clear all previous contents
-                    content_text.setText("");
-
-                    Snackbar.make(view, "Disconnect from Google Play Services.", Snackbar.LENGTH_SHORT)
-                            .setAction("Action", null).show();
-
-                    /**
-                     * Closes the connection to Google Play services.
-                     * No calls can be made using this client after calling this method.
-                     * Any method calls that haven't executed yet will be canceled,
-                     * and their onResult(Result) callbacks won't be called.
-                     */
-                    mGoogleApiClient.stopAutoManage(MainActivity.this); // stop the auto-managing before disconnection!!!
-                    mGoogleApiClient.disconnect();
+                } else if (mGoogleApiClient.isConnected()){
+                    // Get the current step count and display it
+                    getStepCount();
 
                 } else {
-                    Log.d(TAG, "Connecting to Google Play Services ...");
-
-                    // clear all previous contents
-                    content_text.setText("");
-
-                    Snackbar.make(view, "Connecting to Google Play Services ...", Snackbar.LENGTH_SHORT)
-                            .setAction("Action", null).show();
-
-                    mGoogleApiClient.connect();
+                    // Make sure the app is not already connected or attempting to connect
+                    if (!mGoogleApiClient.isConnecting() && !mGoogleApiClient.isConnected()) {
+                        mGoogleApiClient.connect();
+                    }
                 }
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+            Log.d(TAG, "Disconnecting Google Fit API client  ...");
+            /*
+             * Closes the connection to Google Play services.
+             * No calls can be made using this client after calling this method.
+             * Any method calls that haven't executed yet will be canceled,
+             * and their onResult(Result) callbacks won't be called.
+             */
+            mGoogleApiClient.disconnect();
+        }
+        super.onDestroy();
     }
 
     @Override
@@ -181,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
      *  2. having multiple accounts on the device and needing to specify which account to use, etc.
      *
      *  See:
+     *  https://developers.google.com/android/guides/overview
      *  https://developers.google.com/fit/android/?hl=zh-TW
      *  https://developers.google.com/fit/android/get-started?hl=zh-TW#step_5_connect_to_the_fitness_service
      *  https://developers.google.com/fit/android/authorization
@@ -193,6 +198,8 @@ public class MainActivity extends AppCompatActivity {
      *
      */
     protected void buildFitnessClient() {
+        Log.d(TAG, "Building Google Fit API client ...");
+
         // Create the Google API Client
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(Fitness.HISTORY_API)
@@ -202,9 +209,8 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onConnected(Bundle bundle) {
                                 Log.i(TAG, "Connected!!!");
-                                // Now you can make calls to the Fitness APIs.  What to do?
-                                // Look at some data!!
-                                new GoogleFitAsyncTask().execute();
+                                // Get the current step count and display it
+                                getStepCount();
                             }
 
                             @Override
@@ -222,59 +228,106 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                 )
-                .enableAutoManage(MainActivity.this, 0, new GoogleApiClient.OnConnectionFailedListener() {
-                    /**
-                     * The majority of this sample code shows how to use the enableAutoManage method to
-                     * initiate an automatically managed connection with automatically resolved errors.
-                     * In almost all cases, this is the best and easiest way to connect to Google APIs
-                     * from an Android app. However, there are some situations where we would want
-                     * to use a manually managed connection to Google APIs in the app:
-                     * - To access Google APIs outside of an activity or retain control of the API connection
-                     * - To customize connection error handling and resolution
-                     *
-                     * See:
-                     * https://developers.google.com/android/guides/api-client#manually_managed_connections
-                     *
-                     * But seems there is an issue with enableAutoManage:
-                     * https://code.google.com/p/android/issues/detail?id=218157
-                     */
+                .addOnConnectionFailedListener(new GoogleApiClient.OnConnectionFailedListener() {
                     @Override
-                    public void onConnectionFailed(ConnectionResult result) {
-                        Log.i(TAG, "Google Play services connection failed. Cause: " +  result.toString());
+                    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+                        Log.d(TAG, "Google Fit API client connection failed. Cause: " +  connectionResult.toString());
 
                         // clear all previous contents
-                        content_text.setText("Google Play services connection failed. Cause: " +  result.toString());
+                        content_text.setText("Google Fit API client connection failed. Cause: " +  connectionResult.toString());
 
-                        Snackbar.make(
-                                MainActivity.this.findViewById(R.id.main_activity_view),
-                                "Exception while connecting to Google Play services: " + result.getErrorMessage(),
-                                Snackbar.LENGTH_SHORT).show();
+                        if (connectionResult.hasResolution()) {
+                            try {
+                                // there is a resolution to the error, request that the user take immediate action to resolve
+                                connectionResult.startResolutionForResult(MainActivity.this, REQUEST_RESOLVE_ERROR);
+                            } catch (IntentSender.SendIntentException e) {
+                                Log.e(TAG, e.getMessage(), e);
+                                // There was an error with the resolution intent, simply retry connection again
+                                mGoogleApiClient.connect();
+                            }
+
+                        } else {
+                            Bundle bundle = new Bundle();
+                            bundle.putInt(REQUEST_RESOLVE_ERROR_DIALOG, connectionResult.getErrorCode());
+
+                            // attempt to show dialog using GoogleApiAvailability.getErrorDialog() ...
+                            DialogFragment errorDialog = new DialogFragment() {
+                                @Override
+                                public Dialog onCreateDialog(Bundle savedInstanceState) {
+                                    // Get the error code and retrieve the appropriate dialog
+                                    int errorCode = this.getArguments().getInt(REQUEST_RESOLVE_ERROR_DIALOG);
+                                    return GoogleApiAvailability.getInstance().getErrorDialog(
+                                            this.getActivity(), errorCode, REQUEST_RESOLVE_ERROR);
+                                }
+                                @Override
+                                public void onDismiss(DialogInterface dialog) {
+                                    Snackbar.make(
+                                            MainActivity.this.findViewById(R.id.main_activity_view),
+                                            "Exception while connecting to Google Fit API client ",
+                                            Snackbar.LENGTH_SHORT).show();
+                                }
+                            };
+                            errorDialog.setArguments(bundle);
+                            errorDialog.show(getSupportFragmentManager(), "error dialog");
+                        }
                     }
-                })
-                .build();
+                }).build();
+
+                mGoogleApiClient.connect();
     }
 
-    private class GoogleFitAsyncTask extends AsyncTask<Void, Void, Void> {
-        @Override
-        protected Void doInBackground(Void... voids) {
-            // To read data from the fitness history, first create a DataReadRequest instance
-            DataReadRequest readRequest = queryFitnessData();
-
-            // [END build_read_data_request]
-
-            // [START read_dataset]
-            // Invoke the History API to fetch the data with the query and await the result of
-            // the read request.
-            // Either wait the result synchronously or provide a callback method to process the data from the fitness history
-            DataReadResult dataReadResult = Fitness.HistoryApi.readData(mGoogleApiClient, readRequest).await(1, TimeUnit.MINUTES);
-            // [END read_dataset]
-
-            // For the sake of the sample, we'll print the data so we can see what we just added.
-            // In general, logging fitness information should be avoided for privacy reasons.
-            printData(dataReadResult);
-
-            return null;
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_RESOLVE_ERROR) {
+            Log.d(TAG, "Callback from resolving error...");
+            if (resultCode == RESULT_OK) {
+                Log.d(TAG, "-> OK");
+                // Make sure the app is not already connected or attempting to connect
+                if (!mGoogleApiClient.isConnecting() &&
+                        !mGoogleApiClient.isConnected()) {
+                    mGoogleApiClient.connect();
+                }
+            } else {
+                Log.d(TAG, "-> FAIL");
+                Snackbar.make(
+                        MainActivity.this.findViewById(R.id.main_activity_view),
+                        "Exception while connecting to Google Fit API client ",
+                        Snackbar.LENGTH_SHORT).show();
+            }
         }
+    }
+
+    protected void getStepCount() {
+        /**
+         * Either wait the result synchronously or provide a callback method to process the data
+         */
+
+        // To read data from the fitness history, first create a DataReadRequest instance
+        DataReadRequest readRequest = createReadRequest();
+
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            Log.d(TAG, "In the Main (UI) Thread");
+            getStepCount_Async(readRequest);
+        } else {
+            Log.d(TAG, "In the Looper Thread");
+            getStepCount_Sync(readRequest);
+        }
+    }
+
+    protected void getStepCount_Async(DataReadRequest request) {
+        // Sets the callback to get the result asynchronously.
+        Fitness.HistoryApi.readData(mGoogleApiClient, request).setResultCallback(new ResultCallback<DataReadResult>() {
+            @Override
+            public void onResult(@NonNull DataReadResult dataReadResult) {
+                printData(dataReadResult);
+            }
+        });
+    }
+
+    protected void getStepCount_Sync(DataReadRequest request) {
+        // Blocks the thread until the task is completed.
+        DataReadResult dataReadResult = Fitness.HistoryApi.readData(mGoogleApiClient, request).await(1, TimeUnit.MINUTES);
+        printData(dataReadResult);
     }
 
     /**
@@ -283,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
      * See:
      * https://developers.google.com/fit/android/history?hl=zh-TW
      */
-    protected DataReadRequest queryFitnessData() {
+    protected DataReadRequest createReadRequest() {
         // [START build_read_data_request]
         // Setting a start and end date using a range from midnight of current date to current time stamp.
         Calendar cal = Calendar.getInstance();
@@ -329,29 +382,38 @@ public class MainActivity extends AppCompatActivity {
      * directory to avoid exposing it to other applications.
      */
     protected void printData(DataReadResult dataReadResult) {
-        // [START parse_read_data_result]
         // If the DataReadRequest object specified aggregated data, dataReadResult will be returned
         // as buckets containing DataSets, instead of just DataSets.
-        if (dataReadResult.getBuckets().size() > 0) {
-            Log.i(TAG, "Number of returned buckets of DataSets is: "
-                    + dataReadResult.getBuckets().size());
-            for (Bucket bucket : dataReadResult.getBuckets()) {
-                List<DataSet> dataSets = bucket.getDataSets();
-                for (DataSet dataSet : dataSets) {
+        if (dataReadResult.getStatus().isSuccess()) {
+            if (dataReadResult.getBuckets().size() > 0) {
+                Log.i(TAG, "Number of returned buckets of DataSets is: "
+                        + dataReadResult.getBuckets().size());
+                for (Bucket bucket : dataReadResult.getBuckets()) {
+                    List<DataSet> dataSets = bucket.getDataSets();
+                    for (DataSet dataSet : dataSets) {
+                        dumpDataSet(dataSet);
+                    }
+                }
+            } else if (dataReadResult.getDataSets().size() > 0) {
+                Log.i(TAG, "Number of returned DataSets is: "
+                        + dataReadResult.getDataSets().size());
+                for (DataSet dataSet : dataReadResult.getDataSets()) {
                     dumpDataSet(dataSet);
                 }
             }
-        } else if (dataReadResult.getDataSets().size() > 0) {
-            Log.i(TAG, "Number of returned DataSets is: "
-                    + dataReadResult.getDataSets().size());
-            for (DataSet dataSet : dataReadResult.getDataSets()) {
-                dumpDataSet(dataSet);
-            }
+        } else {
+            Log.i(TAG, "Get history failed. Cause: " + dataReadResult.getStatus().toString());
+
+            // clear all previous contents
+            content_text.setText("Get history failed. Cause: " +  dataReadResult.getStatus().toString());
+
+            Snackbar.make(
+                    MainActivity.this.findViewById(R.id.main_activity_view),
+                    "Exception while getting history API: " + dataReadResult.getStatus().getStatusMessage(),
+                    Snackbar.LENGTH_SHORT).show();
         }
-        // [END parse_read_data_result]
     }
 
-    // [START parse_dataset]
     protected void dumpDataSet(final DataSet dataSet) {
         runOnUiThread (new Thread(new Runnable() {
             @Override
@@ -387,7 +449,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }));
     }
-    // [END parse_dataset]
 
     protected boolean checkNetworkStatus() {
         ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
