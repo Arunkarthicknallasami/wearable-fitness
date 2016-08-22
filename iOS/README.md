@@ -4,21 +4,34 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 
 <b>CocoaPods Setup Steps</b>
 
-- Check any installed Ruby versions <br/> 
-<i><b>rvm list known</b></i> <br/>
+1. Check any installed Ruby versions <br/> 
+<i>rvm list known</i> <br/>
 
-- Install Homebrew <br/> 
-<i><b>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</b></i> <br/> 
+2. Install Homebrew <br/> 
+<i>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</i> <br/> 
 
-- Upgrade Ruby to 2.2.2 and set to default <br/>
-<i><b>rvm install ruby-2.2.2</b></i> <br/>
-<i><b>rvm --default use ruby-2.2.0</b></i> <br/>
-<i><b>ruby -v</b></i> <br/>
+3. Upgrade Ruby to 2.2.2 and set to default <br/>
+<i>rvm install ruby-2.2.2</i> <br/>
+<i>rvm --default use ruby-2.2.0</i> <br/>
+<i>ruby -v</i> <br/>
 
-- Install Cocoa Pods <br/>
-<i><b>sudo gem install cocoapods</b></i> <br/>
+4. Install Cocoa Pods <br/>
+<i>sudo gem install cocoapods</i> <br/>
 
-- First time download & install Cocoa Pod Dependencies <br/>
-<i>execute <b>pod install</b> command from the project root directory, first time running it will create a .cocoapods folder in the HOME directory and download ALL the dependencies of Cocoa Pod itself, so it can take some time to complete, few hours:( </i> <br/>
-<i>https://cocoapods.org/#get_started</i> <br/>
+5. Create a Podfile with default settings <br/>
+<i>pod init</i> <br/>
+
+6. First time download & install Cocoa Pod Dependencies <br/>
+<i>pod install</i> <br/>
+
+7. First time running it will create a .cocoapods folder in the HOME directory and download ALL the dependencies of Cocoa Pod itself, so it can take some time to complete, few hours:( <br/>
+
+8. Make sure to always open the Xcode workspace instead of the project file when building the project <br/> 
+
+9. Now ready to invoke the API <br/>
+
+#References:
+
+<b>CocoaPods</b> <br/>
+https://cocoapods.org/#get_started <br/>
 
