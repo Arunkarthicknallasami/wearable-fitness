@@ -1,0 +1,27 @@
+# Uncomment this line to define a global platform for your project
+
+platform :ios, '9.0'
+
+source 'https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git' # need to be first 
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+
+def main
+    pod 'SalesforceSDKCore', '~> 4.3.0'
+    pod 'SalesforceNetwork', '~> 4.3.0'
+    pod 'SalesforceRestAPI', '~> 4.3.0'
+    pod 'SmartStore', '~> 4.3.0'
+    pod 'SmartSync', '~> 4.3.0'
+    
+    ui_dependencies
+end
+
+def ui_dependencies
+    pod 'WYPopoverController', git: 'https://github.com/nicolaschengdev/WYPopoverController.git', branch: 'master', submodules: true
+end
+
+target 'TestSalesForce' do
+    main
+end
