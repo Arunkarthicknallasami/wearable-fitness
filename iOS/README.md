@@ -28,7 +28,12 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 
 8. Make sure to always open the Xcode workspace instead of the project file when building the project <br/> 
 
-9. Now ready to invoke the API <br/>
+9. Now ready to invoke the API from main project source code <br/>
+
+10. Future update of dependencies to new version in Podfile, require to update the local repo <br/>
+<i>pod repo update</i><br/>
+<i>pod install</i> <br/>
+
 
 #References:
 
