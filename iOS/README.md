@@ -34,9 +34,18 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 <i>pod repo update</i><br/>
 <i>pod install</i> <br/>
 
+<br/>
 
 #References:
 
 <b>CocoaPods</b> <br/>
 https://cocoapods.org/#get_started <br/>
+
+<b>SalesForce Native SDK for Mobile</b> <br/>
+https://trailhead.salesforce.com//trail/mobile_sdk_intro <br/>
+https://trailhead.salesforce.com/module/mobile_sdk_native_ios <br/>
+https://developer.salesforce.com/page/Wiki <br/>
+https://developer.salesforce.com/page/An_Introduction_to_Environments <br/>
+
+<br/>
 
