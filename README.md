@@ -4,7 +4,7 @@ Mobile Application to use your health and ﬁtness information. <br/>
 
 This would includes the development at least the following components: <br/>
 
-1. A web service which interface the front-end mobile app with the backend systems <br/>
+1. A web service (Cloud CRM solution, i.e. [SalesForce App Cloud](https://www.salesforce.com/ap/platform/overview/) or [Microsoft Dynamics CRM](https://www.microsoft.com/en-us/dynamics/crm.aspx)) which interface the front-end mobile app with the backend systems <br/>
 2. A java-based backend system which process the rule-engine and interface with the oracle database <br/>
 3. An authentication & authorization system to provide identity management (using OAuth2.0 authorization framework) and access control to the webservice <br/>
 4. Integration with social website (i.e. facebook) with the mobile app (iOS and Android)
