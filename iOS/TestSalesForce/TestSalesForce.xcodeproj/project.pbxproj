@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0038451B1D6EF25C0029D58D /* PrelogonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0038451A1D6EF25C0029D58D /* PrelogonViewController.m */; };
-		00DA70B61D6D555600B4DCB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA70B51D6D555600B4DCB1 /* main.m */; };
-		00DA70B91D6D555600B4DCB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA70B81D6D555600B4DCB1 /* AppDelegate.m */; };
-		00DA70BC1D6D555600B4DCB1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA70BB1D6D555600B4DCB1 /* ViewController.m */; };
-		00DA70C11D6D555600B4DCB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00DA70C01D6D555600B4DCB1 /* Assets.xcassets */; };
+		001A9BBD1D71835800C01E59 /* PostlogonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001A9BBC1D71835800C01E59 /* PostlogonViewController.xib */; };
+		001A9BBF1D718B3E00C01E59 /* PrelogonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001A9BBE1D718B3E00C01E59 /* PrelogonViewController.xib */; };
+		0025812D1D70217800060DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0025812C1D70217800060DB3 /* Assets.xcassets */; };
+		002581301D7021A100060DB3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0025812E1D7021A100060DB3 /* Info.plist */; };
+		002581311D7021A100060DB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0025812F1D7021A100060DB3 /* main.m */; };
+		0025813A1D7021D000060DB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 002581331D7021D000060DB3 /* AppDelegate.m */; };
+		0025813B1D7021D000060DB3 /* PostlogonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002581351D7021D000060DB3 /* PostlogonViewController.m */; };
+		0025813C1D7021D000060DB3 /* PostlogonWebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002581371D7021D000060DB3 /* PostlogonWebviewController.m */; };
+		0025813D1D7021D000060DB3 /* PrelogonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002581391D7021D000060DB3 /* PrelogonViewController.m */; };
+		0025813F1D7021F600060DB3 /* RestAPIExplorerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0025813E1D7021F600060DB3 /* RestAPIExplorerViewController.xib */; };
+		002581441D70220D00060DB3 /* QueryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002581411D70220D00060DB3 /* QueryListViewController.m */; };
+		002581451D70220D00060DB3 /* RestApiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002581431D70220D00060DB3 /* RestApiViewController.m */; };
+		00389BF21D75109C00E03434 /* RestApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00389BF11D75109C00E03434 /* RestApiViewController.xib */; };
 		00DA70CF1D6D555600B4DCB1 /* TestSalesForceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA70CE1D6D555600B4DCB1 /* TestSalesForceTests.m */; };
 		00DA70DA1D6D555600B4DCB1 /* TestSalesForceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA70D91D6D555600B4DCB1 /* TestSalesForceUITests.m */; };
 		00DA70E91D6D55F400B4DCB1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DA70E81D6D55F400B4DCB1 /* LaunchScreen.xib */; };
-		00DA70EC1D6D57B600B4DCB1 /* WebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA70EB1D6D57B600B4DCB1 /* WebviewController.m */; };
 		48184800FEE809A76142C051 /* Pods_TestSalesForce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3050E3DB9DB792DB5BCC50AB /* Pods_TestSalesForce.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,16 +44,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		003845191D6EF2150029D58D /* PrelogonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrelogonViewController.h; sourceTree = "<group>"; };
-		0038451A1D6EF25C0029D58D /* PrelogonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrelogonViewController.m; sourceTree = "<group>"; };
+		001A9BBC1D71835800C01E59 /* PostlogonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostlogonViewController.xib; path = XIB/PostlogonViewController.xib; sourceTree = "<group>"; };
+		001A9BBE1D718B3E00C01E59 /* PrelogonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrelogonViewController.xib; path = XIB/PrelogonViewController.xib; sourceTree = "<group>"; };
+		0025812C1D70217800060DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		0025812E1D7021A100060DB3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		0025812F1D7021A100060DB3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
+		002581321D7021D000060DB3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		002581331D7021D000060DB3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		002581341D7021D000060DB3 /* PostlogonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostlogonViewController.h; path = Classes/PostlogonViewController.h; sourceTree = "<group>"; };
+		002581351D7021D000060DB3 /* PostlogonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostlogonViewController.m; path = Classes/PostlogonViewController.m; sourceTree = "<group>"; };
+		002581361D7021D000060DB3 /* PostlogonWebviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostlogonWebviewController.h; path = Classes/PostlogonWebviewController.h; sourceTree = "<group>"; };
+		002581371D7021D000060DB3 /* PostlogonWebviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostlogonWebviewController.m; path = Classes/PostlogonWebviewController.m; sourceTree = "<group>"; };
+		002581381D7021D000060DB3 /* PrelogonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrelogonViewController.h; path = Classes/PrelogonViewController.h; sourceTree = "<group>"; };
+		002581391D7021D000060DB3 /* PrelogonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrelogonViewController.m; path = Classes/PrelogonViewController.m; sourceTree = "<group>"; };
+		0025813E1D7021F600060DB3 /* RestAPIExplorerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RestAPIExplorerViewController.xib; path = XIB/RestAPIExplorerViewController.xib; sourceTree = "<group>"; };
+		002581401D70220D00060DB3 /* QueryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueryListViewController.h; path = Classes/RestAPI/QueryListViewController.h; sourceTree = "<group>"; };
+		002581411D70220D00060DB3 /* QueryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryListViewController.m; path = Classes/RestAPI/QueryListViewController.m; sourceTree = "<group>"; };
+		002581421D70220D00060DB3 /* RestApiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestApiViewController.h; path = Classes/RestAPI/RestApiViewController.h; sourceTree = "<group>"; };
+		002581431D70220D00060DB3 /* RestApiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestApiViewController.m; path = Classes/RestAPI/RestApiViewController.m; sourceTree = "<group>"; };
+		00389BF11D75109C00E03434 /* RestApiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RestApiViewController.xib; path = XIB/RestApiViewController.xib; sourceTree = "<group>"; };
 		00DA70B11D6D555600B4DCB1 /* TestSalesForce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSalesForce.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		00DA70B51D6D555600B4DCB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		00DA70B71D6D555600B4DCB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		00DA70B81D6D555600B4DCB1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		00DA70BA1D6D555600B4DCB1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		00DA70BB1D6D555600B4DCB1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		00DA70C01D6D555600B4DCB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		00DA70C51D6D555600B4DCB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00DA70CA1D6D555600B4DCB1 /* TestSalesForceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSalesForceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DA70CE1D6D555600B4DCB1 /* TestSalesForceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSalesForceTests.m; sourceTree = "<group>"; };
 		00DA70D01D6D555600B4DCB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,8 +71,6 @@
 		00DA70D91D6D555600B4DCB1 /* TestSalesForceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSalesForceUITests.m; sourceTree = "<group>"; };
 		00DA70DB1D6D555600B4DCB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00DA70E81D6D55F400B4DCB1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = XIB/LaunchScreen.xib; sourceTree = "<group>"; };
-		00DA70EA1D6D57B600B4DCB1 /* WebviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewController.h; sourceTree = "<group>"; };
-		00DA70EB1D6D57B600B4DCB1 /* WebviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewController.m; sourceTree = "<group>"; };
 		3050E3DB9DB792DB5BCC50AB /* Pods_TestSalesForce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestSalesForce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA24838560F67C5F5CC45B3 /* Pods-TestSalesForce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSalesForce.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestSalesForce/Pods-TestSalesForce.release.xcconfig"; sourceTree = "<group>"; };
 		DC572D213807DC5DB8AEBE76 /* Pods-TestSalesForce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSalesForce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSalesForce/Pods-TestSalesForce.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +102,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002581281D701FC600060DB3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				002581321D7021D000060DB3 /* AppDelegate.h */,
+				002581331D7021D000060DB3 /* AppDelegate.m */,
+				002581341D7021D000060DB3 /* PostlogonViewController.h */,
+				002581351D7021D000060DB3 /* PostlogonViewController.m */,
+				002581361D7021D000060DB3 /* PostlogonWebviewController.h */,
+				002581371D7021D000060DB3 /* PostlogonWebviewController.m */,
+				002581381D7021D000060DB3 /* PrelogonViewController.h */,
+				002581391D7021D000060DB3 /* PrelogonViewController.m */,
+				0025812B1D70211700060DB3 /* RestAPI */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		002581291D701FEB00060DB3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0025812C1D70217800060DB3 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0025812B1D70211700060DB3 /* RestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				002581401D70220D00060DB3 /* QueryListViewController.h */,
+				002581411D70220D00060DB3 /* QueryListViewController.m */,
+				002581421D70220D00060DB3 /* RestApiViewController.h */,
+				002581431D70220D00060DB3 /* RestApiViewController.m */,
+			);
+			name = RestAPI;
+			sourceTree = "<group>";
+		};
 		00DA70A81D6D555600B4DCB1 = {
 			isa = PBXGroup;
 			children = (
@@ -112,17 +162,9 @@
 		00DA70B31D6D555600B4DCB1 /* TestSalesForce */ = {
 			isa = PBXGroup;
 			children = (
-				00DA70B71D6D555600B4DCB1 /* AppDelegate.h */,
-				00DA70B81D6D555600B4DCB1 /* AppDelegate.m */,
-				00DA70C01D6D555600B4DCB1 /* Assets.xcassets */,
-				00DA70C51D6D555600B4DCB1 /* Info.plist */,
-				003845191D6EF2150029D58D /* PrelogonViewController.h */,
-				0038451A1D6EF25C0029D58D /* PrelogonViewController.m */,
+				002581291D701FEB00060DB3 /* Resources */,
+				002581281D701FC600060DB3 /* Classes */,
 				00DA70B41D6D555600B4DCB1 /* Supporting Files */,
-				00DA70BA1D6D555600B4DCB1 /* ViewController.h */,
-				00DA70BB1D6D555600B4DCB1 /* ViewController.m */,
-				00DA70EA1D6D57B600B4DCB1 /* WebviewController.h */,
-				00DA70EB1D6D57B600B4DCB1 /* WebviewController.m */,
 				00DA70E71D6D55BC00B4DCB1 /* XIB */,
 			);
 			path = TestSalesForce;
@@ -131,7 +173,8 @@
 		00DA70B41D6D555600B4DCB1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				00DA70B51D6D555600B4DCB1 /* main.m */,
+				0025812E1D7021A100060DB3 /* Info.plist */,
+				0025812F1D7021A100060DB3 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -157,7 +200,11 @@
 		00DA70E71D6D55BC00B4DCB1 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				00389BF11D75109C00E03434 /* RestApiViewController.xib */,
+				0025813E1D7021F600060DB3 /* RestAPIExplorerViewController.xib */,
 				00DA70E81D6D55F400B4DCB1 /* LaunchScreen.xib */,
+				001A9BBC1D71835800C01E59 /* PostlogonViewController.xib */,
+				001A9BBE1D718B3E00C01E59 /* PrelogonViewController.xib */,
 			);
 			name = XIB;
 			sourceTree = "<group>";
@@ -286,8 +333,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001A9BBD1D71835800C01E59 /* PostlogonViewController.xib in Resources */,
+				001A9BBF1D718B3E00C01E59 /* PrelogonViewController.xib in Resources */,
+				00389BF21D75109C00E03434 /* RestApiViewController.xib in Resources */,
+				0025812D1D70217800060DB3 /* Assets.xcassets in Resources */,
 				00DA70E91D6D55F400B4DCB1 /* LaunchScreen.xib in Resources */,
-				00DA70C11D6D555600B4DCB1 /* Assets.xcassets in Resources */,
+				0025813F1D7021F600060DB3 /* RestAPIExplorerViewController.xib in Resources */,
+				002581301D7021A100060DB3 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +412,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00DA70BC1D6D555600B4DCB1 /* ViewController.m in Sources */,
-				00DA70B91D6D555600B4DCB1 /* AppDelegate.m in Sources */,
-				00DA70B61D6D555600B4DCB1 /* main.m in Sources */,
-				00DA70EC1D6D57B600B4DCB1 /* WebviewController.m in Sources */,
-				0038451B1D6EF25C0029D58D /* PrelogonViewController.m in Sources */,
+				0025813A1D7021D000060DB3 /* AppDelegate.m in Sources */,
+				0025813C1D7021D000060DB3 /* PostlogonWebviewController.m in Sources */,
+				002581311D7021A100060DB3 /* main.m in Sources */,
+				002581441D70220D00060DB3 /* QueryListViewController.m in Sources */,
+				0025813B1D7021D000060DB3 /* PostlogonViewController.m in Sources */,
+				0025813D1D7021D000060DB3 /* PrelogonViewController.m in Sources */,
+				002581451D70220D00060DB3 /* RestApiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = TestSalesForce/Info.plist;
+				INFOPLIST_FILE = "TestSalesForce/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestSalesForce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,7 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = TestSalesForce/Info.plist;
+				INFOPLIST_FILE = "TestSalesForce/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestSalesForce;
 				PRODUCT_NAME = "$(TARGET_NAME)";

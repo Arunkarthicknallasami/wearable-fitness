@@ -1,18 +1,18 @@
 //
-//  WebviewController.m
+//  PostlogonWebviewController.m
 //  TestApp3
 //
 //  Created by jeffrey on 26/3/15.
 //  Copyright (c) 2015 jeffrey. All rights reserved.
 //
 
-#import "WebviewController.h"
+#import "PostlogonWebviewController.h"
 
-@interface WebviewController ()
+@interface PostlogonWebviewController ()
 
 @end
 
-@implementation WebviewController
+@implementation PostlogonWebviewController
 
 UIWebView *webView;
 

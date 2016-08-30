@@ -10,4 +10,7 @@
 
 @interface PrelogonViewController : UIViewController
 
+@property (nonatomic, strong) UIButton *testLoginBtn;
+@property (nonatomic, strong) UIButton *testRestApiBtn;
+
 @end

@@ -48,5 +48,7 @@
  */
 - (void)handleUserSwitch:(SFUserAccount *)fromUser toUser:(SFUserAccount *)toUser;
 
+- (void)exportTestingCredentials;
+
 @end
 

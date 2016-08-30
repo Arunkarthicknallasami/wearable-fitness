@@ -1,5 +1,5 @@
 //
-//  WebviewController.h
+//  PostlogonWebviewController.h
 //  TestApp3
 //
 //  Created by jeffrey on 26/3/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebviewController : UIViewController<UIWebViewDelegate>
+@interface PostlogonWebviewController : UIViewController<UIWebViewDelegate>
 
 @end
 

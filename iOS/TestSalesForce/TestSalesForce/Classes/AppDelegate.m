@@ -6,10 +6,13 @@
 //  Copyright © 2016 Jeffrey Garcia. All rights reserved.
 //
 
+#import <MobileCoreServices/UTCoreTypes.h>
+
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "PostlogonViewController.h"
 #import "PrelogonViewController.h"
 
+#import <SalesforceSDKCore/SFJsonUtils.h>
 #import <SalesforceSDKCore/SFLogger.h>
 #import <SalesforceSDKCore/SalesforceSDKManager.h>
 #import <SmartStore/SalesforceSDKManagerWithSmartStore.h>
@@ -20,13 +23,15 @@
 
 @implementation AppDelegate
 
-// Fill these in when creating a new Connected Application on Force.com
+// Fill these in the code or plist when creating a new Connected Application on Force.com
 //static NSString * const RemoteAccessConsumerKey = @"3MVG9ZL0ppGP5UrA8Ome44F64wrKkfn3ox3hazIAAdMS4srxW8EQgK.WBK_QgVIUrR9yFEj.PdA027OHpLeR6";
 //static NSString * const OAuthRedirectURI        = @"mysampleapp://auth/success";
 
 //static NSString * const RemoteAccessConsumerKey = @"3MVG9Iu66FKeHhINkB1l7xt7kR8czFcCTUhgoA8Ol2Ltf1eYHOU4SqQRSEitYFDUpqRWcoQ2.dBv_a1Dyu5xa";
 //static NSString * const OAuthRedirectURI        = @"testsfdc:///mobilesdk/detect/oauth/done";
 
+NSString * sfRemoteAccessConsumerKey;
+NSString * sfOAuthRedirectURI;
 
 /**
  * Override the super class <NSOBject> constructor for the instantiation of
@@ -42,28 +47,25 @@
     // Need to use SalesforceSDKManagerWithSmartStore when using smartstore
     [SalesforceSDKManager setInstanceClass:[SalesforceSDKManagerWithSmartStore class]];
     
-    // Load Salesforce consumer key and redirect URI from plist
-    NSString * sfConsumerKey;
-    NSString * sfRedirectUri;
-    
-    sfConsumerKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"SFRemoteAccessConsumerKey"];
-    if (sfConsumerKey) {
-        NSLog(@"%@ - Salesforce remote access consumer key: %@", NSStringFromClass([self class]), sfConsumerKey);
+    // Should NOT be necessary as Salesforce SDK will automatically lookup the value in plist
+    // Load Salesforce consumer key and redirect URI from plist//
+    sfRemoteAccessConsumerKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"RemoteAccessConsumerKey"];
+    if (sfRemoteAccessConsumerKey) {
+        NSLog(@"%@ - Salesforce remote access consumer key: %@", NSStringFromClass([self class]), sfRemoteAccessConsumerKey);
     } else {
-        sfConsumerKey = @"3MVG9Iu66FKeHhINkB1l7xt7kR8czFcCTUhgoA8Ol2Ltf1eYHOU4SqQRSEitYFDUpqRWcoQ2.dBv_a1Dyu5xa";
-        NSLog(@"%@ - Salesforce remote access consumer key is undefined in plist! Setting to default: %@", NSStringFromClass([self class]),sfConsumerKey);
+        sfRemoteAccessConsumerKey = @"3MVG9Iu66FKeHhINkB1l7xt7kR8czFcCTUhgoA8Ol2Ltf1eYHOU4SqQRSEitYFDUpqRWcoQ2.dBv_a1Dyu5xa";
+        NSLog(@"%@ - Salesforce remote access consumer key is undefined in plist! Setting to default: %@", NSStringFromClass([self class]), sfRemoteAccessConsumerKey);
     }
-    
-    sfRedirectUri = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"SFOAuthRedirectURI"];
-    if (sfRedirectUri) {
-        NSLog(@"%@ - Salesforce redirect URI: %@", NSStringFromClass([self class]), sfRedirectUri);
+    sfOAuthRedirectURI = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"OAuthRedirectURI"];
+    if (sfOAuthRedirectURI) {
+        NSLog(@"%@ - Salesforce redirect URI: %@", NSStringFromClass([self class]), sfOAuthRedirectURI);
     } else {
-        sfRedirectUri = @"testsfdc:///mobilesdk/detect/oauth/done";
-        NSLog(@"%@ - Salesforce redirect URI is undefined in plist! Setting to default: %@", NSStringFromClass([self class]), sfRedirectUri);
+        sfOAuthRedirectURI = @"testsfdc:///mobilesdk/detect/oauth/done";
+        NSLog(@"%@ - Salesforce redirect URI is undefined in plist! Setting to default: %@", NSStringFromClass([self class]), sfOAuthRedirectURI);
     }
+    [SalesforceSDKManager sharedManager].connectedAppId = sfRemoteAccessConsumerKey;
+    [SalesforceSDKManager sharedManager].connectedAppCallbackUri = sfOAuthRedirectURI;
     
-    [SalesforceSDKManager sharedManager].connectedAppId = sfConsumerKey;
-    [SalesforceSDKManager sharedManager].connectedAppCallbackUri = sfRedirectUri;
     [SalesforceSDKManager sharedManager].authScopes = @[ @"web", @"api" ];
     
     __weak AppDelegate *weakSelf = self;
@@ -91,7 +93,6 @@
         [weakSelf handleSdkManagerLogout];
     };
     [SalesforceSDKManager sharedManager].switchUserAction = ^(SFUserAccount *fromUser, SFUserAccount *toUser) {
-        
         [weakSelf log:SFLogLevelError format:@"Switch user action: from: %@ to: %@", [fromUser userName], [toUser userName]];
         [weakSelf handleUserSwitch:fromUser toUser:toUser];
     };
@@ -156,8 +157,15 @@
     if (![[SFAuthenticationManager sharedManager] haveValidSession]) {
         NSLog(@"%@ - not authenticated", NSStringFromClass([self class]));
         
-        UIViewController *viewController = [[PrelogonViewController alloc] init];
-        [self.window setRootViewController:viewController];
+        UIViewController *viewController = [[PrelogonViewController alloc] initWithNibName:@"PrelogonViewController" bundle:nil];
+        //[self.window setRootViewController:viewController];
+        
+        //if you want a nav controller do this
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        
+        //add them to window
+        [self.window addSubview:navController.view];
+        [self.window setRootViewController:navController];
         
     } else {
         NSLog(@"%@ - already authenticated", NSStringFromClass([self class]));
@@ -182,7 +190,7 @@
  * After logon successfully
  */
 - (void)handleSdkManagerLogon {
-    UIViewController *viewController = [[ViewController alloc] init];
+    UIViewController *viewController = [[PostlogonViewController alloc] initWithNibName:@"PostlogonViewController" bundle:nil];
     
     //if you want a nav controller do this
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
@@ -226,5 +234,26 @@
     [self log:SFLogLevelDebug format:@"SFUserAccountManager changed from user %@ to %@.  Resetting app.", fromUser.userName, toUser.userName];
 }
 
+#pragma mark - Unit test helpers
+
+- (void)exportTestingCredentials {
+    //collect credentials and copy to pasteboard
+    SFOAuthCredentials *creds = [SFUserAccountManager sharedInstance].currentUser.credentials;
+    NSMutableDictionary *configDict = [NSMutableDictionary dictionaryWithDictionary:@{@"test_client_id": sfRemoteAccessConsumerKey,
+                                                                                      @"test_login_domain": [SFUserAccountManager sharedInstance].loginHost,
+                                                                                      @"test_redirect_uri": sfOAuthRedirectURI,
+                                                                                      @"refresh_token": creds.refreshToken,
+                                                                                      @"instance_url": [creds.instanceUrl absoluteString],
+                                                                                      @"identity_url": [creds.identityUrl absoluteString],
+                                                                                      @"access_token": creds.accessToken}];
+    
+    if (creds.communityUrl != nil) {
+        configDict[@"community_url"] = [creds.communityUrl absoluteString];
+    }
+    
+    NSString *configJSON = [SFJsonUtils JSONRepresentation:configDict];
+    UIPasteboard *gpBoard = [UIPasteboard generalPasteboard];
+    [gpBoard setValue:configJSON forPasteboardType:(NSString*)kUTTypeUTF8PlainText];
+}
 
 @end
