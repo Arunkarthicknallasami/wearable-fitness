@@ -34,6 +34,13 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 <i>pod repo update</i><br/>
 <i>pod install</i> <br/>
 
+11. Upgrade of Cocoapods to beta version <br/>
+<i>sudo gem uninstall cocoapods</i> <br/>
+<i>sudo gem uninstall cocoapods-core</i> <br/>
+<i>gem install cocoapods --pre</i> <br/>
+<i>gem --version</i> <br/>
+<i>gem env</i> <br/>
+
 <br/>
 
 #References:
