@@ -49,7 +49,7 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 #References:
 
 <b>CocoaPods</b> <br/>
-https://cocoapods.org/#get_started <br/>
+- https://cocoapods.org/#get_started <br/>
 
 <b>Swift 3</b> <br/>
 - https://developer.apple.com/swift/ <br/>
@@ -65,44 +65,43 @@ https://cocoapods.org/#get_started <br/>
 
 
 <b>SalesForce Native SDK for Mobile</b> <br/>
-What is Salesforce
-https://www.salesforce.com/products/what-is-salesforce/
+What is Salesforce <br/>
+- https://www.salesforce.com/products/what-is-salesforce/ <br/>
 
-Introduction of Salesforce App Cloud Platform
-https://www.salesforce.com/platform/overview/
+Introduction of Salesforce App Cloud Platform <br/>
+- https://www.salesforce.com/platform/overview/ <br/>
 
-Introduction to Salesforce Environments
-https://developer.salesforce.com/page/An_Introduction_to_Environments
+Introduction to Salesforce Environments <br/>
+- https://developer.salesforce.com/page/An_Introduction_to_Environments <br/>
 
-Integrating with Force.com Platform
-https://developer.salesforce.com/page/Integrating_with_the_Force.com_Platform
-https://developer.salesforce.com/docs/atlas.en-us.workbook.meta/workbook/workshops_intro.htm?utm_campaign=getting-started&utm_source=DSC&utm_medium=website
+Integrating with Force.com Platform <br/>
+- https://developer.salesforce.com/page/Integrating_with_the_Force.com_Platform <br/>
+- https://developer.salesforce.com/docs/atlas.en-us.workbook.meta/workbook/workshops_intro.htm?utm_campaign=getting-started&utm_source=DSC&utm_medium=website <br/>
 
-Introduction to Force.com REST API
-https://developer.salesforce.com/docs/atlas.en-us.202.0.api_rest.meta/api_rest/intro_what_is_rest_api.htm 
+Introduction to Force.com REST API <br/>
+- https://developer.salesforce.com/docs/atlas.en-us.202.0.api_rest.meta/api_rest/intro_what_is_rest_api.htm  <br/>
 
-SOAP API Implementation Consideration
-https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/implementation_considerations.htm?SearchType=Stem
+SOAP API Implementation Consideration <br/>
+- https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/implementation_considerations.htm?SearchType=Stem <br/>
 
-Salesforce Limits Quick Reference Guide
-https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_overview.htm
+Salesforce Limits Quick Reference Guide <br/>
+- https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_overview.htm <br/>
 
-Force.com Sites Limit and Billing
-https://help.salesforce.com/HTViewHelpDoc?id=sites_limits.htm&siteLang=en_us
+Force.com Sites Limit and Billing <br/>
+- https://help.salesforce.com/HTViewHelpDoc?id=sites_limits.htm&siteLang=en_us <br/>
 
-Caching Force.com Sites Pages
-https://help.salesforce.com/HTViewHelpDoc?id=sites_caching.htm&language=en_US
+Caching Force.com Sites Pages <br/>
+- https://help.salesforce.com/HTViewHelpDoc?id=sites_caching.htm&language=en_US <br/>
 
-Viewing 24-Hour Force.com Sites Usage History
-https://help.salesforce.com/HTViewHelpDoc?id=sites_usage_history.htm&language=en_US
+Viewing 24-Hour Force.com Sites Usage History <br/>
+- https://help.salesforce.com/HTViewHelpDoc?id=sites_usage_history.htm&language=en_US <br/>
 
-Salesforce Mobile SDK
-https://developer.salesforce.com/page/Mobile
-https://developer.salesforce.com/blogs/engineering/2015/02/salesforce-mobile-sdk-3-1-unified-app-architecture-brings-unparalleled-flexibility.html
-https://developer.salesforce.com/blogs/engineering/2016/01/salesforce-mobile-sdk-4-0-flexible-libraries-native-hybrid-app-development.html
-https://trailhead.salesforce.com//trail/mobile_sdk_intro
-https://trailhead.salesforce.com/module/mobile_sdk_native_ios
-
+Salesforce Mobile SDK <br/>
+- https://developer.salesforce.com/page/Mobile <br/>
+- https://developer.salesforce.com/blogs/engineering/2015/02/salesforce-mobile-sdk-3-1-unified-app-architecture-brings-unparalleled-flexibility.html <br/>
+- https://developer.salesforce.com/blogs/engineering/2016/01/salesforce-mobile-sdk-4-0-flexible-libraries-native-hybrid-app-development.html <br/>
+- https://trailhead.salesforce.com//trail/mobile_sdk_intro <br/>
+- https://trailhead.salesforce.com/module/mobile_sdk_native_ios <br/>
 
 <br/>
 
