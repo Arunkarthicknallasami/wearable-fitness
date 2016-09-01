@@ -51,6 +51,8 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 <b>CocoaPods</b> <br/>
 - https://cocoapods.org/#get_started <br/>
 
+<br/>
+
 <b>Swift 3</b> <br/>
 - https://developer.apple.com/swift/ <br/>
 - https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson1.html#//apple_ref/doc/uid/TP40015214-CH3-SW1 <br/>
@@ -63,15 +65,15 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 - https://github.com/apple/swift-evolution <br/>
 - https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md <br/>
 
+<br/>
 
-<b>SalesForce Native SDK for Mobile</b> <br/>
-What is Salesforce <br/>
+<b>What is Salesforce </b><br/>
 - https://www.salesforce.com/products/what-is-salesforce/ <br/>
 
-Introduction of Salesforce App Cloud Platform <br/>
+<b>Introduction of Salesforce App Cloud Platform</b> <br/>
 - https://www.salesforce.com/platform/overview/ <br/>
 
-Introduction to Salesforce Environments <br/>
+<b>Introduction to Salesforce Environments</b> <br/>
 - https://developer.salesforce.com/page/An_Introduction_to_Environments <br/>
 
 Integrating with Force.com Platform <br/>
