@@ -41,12 +41,28 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 <i>gem --version</i> <br/>
 <i>gem env</i> <br/>
 
+12. Specify the command-line on particular Cocoapods version, use underscore to surround the version <br/>
+<i>pod <b>\_1.1.0.beta.1\_</b> install</i> <br/>
+
 <br/>
 
 #References:
 
 <b>CocoaPods</b> <br/>
 https://cocoapods.org/#get_started <br/>
+
+<b>Swift 3</b> <br/>
+https://developer.apple.com/swift/ <br/>
+https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson1.html#//apple_ref/doc/uid/TP40015214-CH3-SW1 <br/>
+https://swift.org/getting-started/ <br/>
+https://swift.org/blog/swift-3-0-preview-1-released/ <br/>
+https://swift.org/migration-guide/ <br/>
+https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html <br/>
+https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html#//apple_ref/doc/uid/TP40014097-CH7-ID285 <br/>
+https://developer.apple.com/swift/blog/?id=23 <br/>
+https://github.com/apple/swift-evolution <br/>
+https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md <br/>
+
 
 <b>SalesForce Native SDK for Mobile</b> <br/>
 https://trailhead.salesforce.com//trail/mobile_sdk_intro <br/>
