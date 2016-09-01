@@ -52,23 +52,57 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 https://cocoapods.org/#get_started <br/>
 
 <b>Swift 3</b> <br/>
-https://developer.apple.com/swift/ <br/>
-https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson1.html#//apple_ref/doc/uid/TP40015214-CH3-SW1 <br/>
-https://swift.org/getting-started/ <br/>
-https://swift.org/blog/swift-3-0-preview-1-released/ <br/>
-https://swift.org/migration-guide/ <br/>
-https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html <br/>
-https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html#//apple_ref/doc/uid/TP40014097-CH7-ID285 <br/>
-https://developer.apple.com/swift/blog/?id=23 <br/>
-https://github.com/apple/swift-evolution <br/>
-https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md <br/>
+- https://developer.apple.com/swift/ <br/>
+- https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson1.html#//apple_ref/doc/uid/TP40015214-CH3-SW1 <br/>
+- https://swift.org/getting-started/ <br/>
+- https://swift.org/blog/swift-3-0-preview-1-released/ <br/>
+- https://swift.org/migration-guide/ <br/>
+- https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html <br/>
+- https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html#//apple_ref/doc/uid/TP40014097-CH7-ID285 <br/>
+- https://developer.apple.com/swift/blog/?id=23 <br/>
+- https://github.com/apple/swift-evolution <br/>
+- https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md <br/>
 
 
 <b>SalesForce Native SDK for Mobile</b> <br/>
-https://trailhead.salesforce.com//trail/mobile_sdk_intro <br/>
-https://trailhead.salesforce.com/module/mobile_sdk_native_ios <br/>
-https://developer.salesforce.com/page/Wiki <br/>
-https://developer.salesforce.com/page/An_Introduction_to_Environments <br/>
+What is Salesforce
+https://www.salesforce.com/products/what-is-salesforce/
+
+Introduction of Salesforce App Cloud Platform
+https://www.salesforce.com/platform/overview/
+
+Introduction to Salesforce Environments
+https://developer.salesforce.com/page/An_Introduction_to_Environments
+
+Integrating with Force.com Platform
+https://developer.salesforce.com/page/Integrating_with_the_Force.com_Platform
+https://developer.salesforce.com/docs/atlas.en-us.workbook.meta/workbook/workshops_intro.htm?utm_campaign=getting-started&utm_source=DSC&utm_medium=website
+
+Introduction to Force.com REST API
+https://developer.salesforce.com/docs/atlas.en-us.202.0.api_rest.meta/api_rest/intro_what_is_rest_api.htm 
+
+SOAP API Implementation Consideration
+https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/implementation_considerations.htm?SearchType=Stem
+
+Salesforce Limits Quick Reference Guide
+https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_overview.htm
+
+Force.com Sites Limit and Billing
+https://help.salesforce.com/HTViewHelpDoc?id=sites_limits.htm&siteLang=en_us
+
+Caching Force.com Sites Pages
+https://help.salesforce.com/HTViewHelpDoc?id=sites_caching.htm&language=en_US
+
+Viewing 24-Hour Force.com Sites Usage History
+https://help.salesforce.com/HTViewHelpDoc?id=sites_usage_history.htm&language=en_US
+
+Salesforce Mobile SDK
+https://developer.salesforce.com/page/Mobile
+https://developer.salesforce.com/blogs/engineering/2015/02/salesforce-mobile-sdk-3-1-unified-app-architecture-brings-unparalleled-flexibility.html
+https://developer.salesforce.com/blogs/engineering/2016/01/salesforce-mobile-sdk-4-0-flexible-libraries-native-hybrid-app-development.html
+https://trailhead.salesforce.com//trail/mobile_sdk_intro
+https://trailhead.salesforce.com/module/mobile_sdk_native_ios
+
 
 <br/>
 
