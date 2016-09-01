@@ -76,29 +76,29 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 <b>Introduction to Salesforce Environments</b> <br/>
 - https://developer.salesforce.com/page/An_Introduction_to_Environments <br/>
 
-Integrating with Force.com Platform <br/>
+<b>Integrating with Force.com Platform</b> <br/>
 - https://developer.salesforce.com/page/Integrating_with_the_Force.com_Platform <br/>
 - https://developer.salesforce.com/docs/atlas.en-us.workbook.meta/workbook/workshops_intro.htm?utm_campaign=getting-started&utm_source=DSC&utm_medium=website <br/>
 
-Introduction to Force.com REST API <br/>
+<b>Introduction to Force.com REST API</b> <br/>
 - https://developer.salesforce.com/docs/atlas.en-us.202.0.api_rest.meta/api_rest/intro_what_is_rest_api.htm  <br/>
 
-SOAP API Implementation Consideration <br/>
+<b>SOAP API Implementation Consideration</b> <br/>
 - https://developer.salesforce.com/docs/atlas.en-us.202.0.api.meta/api/implementation_considerations.htm?SearchType=Stem <br/>
 
-Salesforce Limits Quick Reference Guide <br/>
+<b>Salesforce Limits Quick Reference Guide</b> <br/>
 - https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_overview.htm <br/>
 
-Force.com Sites Limit and Billing <br/>
+<b>Force.com Sites Limit and Billing</b> <br/>
 - https://help.salesforce.com/HTViewHelpDoc?id=sites_limits.htm&siteLang=en_us <br/>
 
-Caching Force.com Sites Pages <br/>
+<b>Caching Force.com Sites Pages</b> <br/>
 - https://help.salesforce.com/HTViewHelpDoc?id=sites_caching.htm&language=en_US <br/>
 
-Viewing 24-Hour Force.com Sites Usage History <br/>
+<b>Viewing 24-Hour Force.com Sites Usage History</b> <br/>
 - https://help.salesforce.com/HTViewHelpDoc?id=sites_usage_history.htm&language=en_US <br/>
 
-Salesforce Mobile SDK <br/>
+<b>Salesforce Mobile SDK</b> <br/>
 - https://developer.salesforce.com/page/Mobile <br/>
 - https://developer.salesforce.com/blogs/engineering/2015/02/salesforce-mobile-sdk-3-1-unified-app-architecture-brings-unparalleled-flexibility.html <br/>
 - https://developer.salesforce.com/blogs/engineering/2016/01/salesforce-mobile-sdk-4-0-flexible-libraries-native-hybrid-app-development.html <br/>
