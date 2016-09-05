@@ -38,8 +38,8 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 <i>sudo gem uninstall cocoapods</i> <br/>
 <i>sudo gem uninstall cocoapods-core</i> <br/>
 <i>gem install cocoapods --pre</i> <br/>
-<i>gem --version</i> <br/>
-<i>gem env</i> <br/>
+<i>pod --version</i> <br/>
+<i>pod env</i> <br/>
 
 12. Specify the command-line on particular Cocoapods version, use underscore to surround the version <br/>
 <i>pod <b>\_1.1.0.beta.1\_</b> install</i> <br/>
