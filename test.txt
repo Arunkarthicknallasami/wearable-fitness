@@ -1,2 +1,6 @@
 change from loca master
+<<<<<<< 319a3be14dea5793847efc44039dcd705df53fd7
 change from remote master
+=======
+change from local master 2
+>>>>>>> test from local master
