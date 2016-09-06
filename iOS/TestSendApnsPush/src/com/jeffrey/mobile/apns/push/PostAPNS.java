@@ -40,7 +40,7 @@ import com.notnoop.apns.internal.Utilities;
 import com.notnoop.exceptions.ApnsDeliveryErrorException;
 
 public class PostAPNS {
-	protected static final String DEVICE_TOKEN = "ed57f396f87b24bab811ecaf9669820697a5ba96f17539734af52c3c343a524e";
+	protected static final String DEVICE_TOKEN = "de791ecccd36bf1bb96d44a00582f5409b60ca57a20d168c0e8e85b5b7030954";
 	protected static final String DEV_P12_FILE = "apns_dev_jeffrey.p12";
 	
 	public static void main(String [] args) {
@@ -134,7 +134,17 @@ public class PostAPNS {
 		 * user.getLastUpdate()) / 1000 / 60 / 60 / 24);
 		 */
 		PayloadBuilder payloadBuilder = APNS.newPayload();
-		payloadBuilder = payloadBuilder.badge(1).alertBody("some message you want to send here").category("INVITE_CATEGORY");
+		
+		// visible payload for showing immediate text message
+		//payloadBuilder = payloadBuilder.badge(2).alertBody("some message you want to send here").category("INVITE_CATEGORY");
+		
+		// invisible payload with just a sound 
+		//payloadBuilder = payloadBuilder.badge(1).category("INVITE_CATEGORY").sound("default");
+		
+		// invisible payload with a high priority
+		payloadBuilder.forNewsstand();
+		
+		System.out.println(payloadBuilder.toString());
 		
 		// check if the message is too long (it won't be sent if it is) and trim it if it is. 
 		if (payloadBuilder.isTooLong()) {
