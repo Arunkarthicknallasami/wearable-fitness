@@ -1,10 +1,10 @@
 <?php
 
 // Put your device token here (without spaces):
-$deviceToken = '94756674a6181b2a4fe50582e39bab85770f76f6633da83d774d376a4d586462';
+$deviceToken = 'de791ecccd36bf1bb96d44a00582f5409b60ca57a20d168c0e8e85b5b7030954';
 
 // Put your private key's passphrase here:
-$passphrase = 'WenderCastPush';
+$passphrase = 'password';
 
 
 ////////////////////////////////////////////////////////////////////////////////
