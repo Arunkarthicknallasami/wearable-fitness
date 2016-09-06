@@ -5,6 +5,17 @@
 //  Created by Jeffrey Garcia on 8/6/16.
 //  Copyright © 2016 Jeffrey Garcia. All rights reserved.
 //
+//  Referenced Link:
+//  http://stackoverflow.com/questions/24269950/ios-intercept-push-notification
+//  http://stackoverflow.com/questions/31617334/how-can-i-intercept-an-ios-push-notification-before-its-displayed-on-the-lock-s
+//  http://stackoverflow.com/questions/12496377/ios-handling-remote-push-notifications
+//  http://stackoverflow.com/questions/18856204/applicationdidreceiveremotenotificationfetchcompletionhandler-not-called
+//  http://stackoverflow.com/questions/31450403/didreceiveremotenotification-not-working-in-the-background
+//  http://stackoverflow.com/questions/33277996/push-notification-does-not-appear-if-app-is-in-background-on-ios-9
+//  https://www.raywenderlich.com/123862/push-notifications-tutorial
+//  http://stackoverflow.com/questions/16233425/get-values-of-particular-key-in-nsdictionary
+//
+//
 
 #import "AppDelegate.h"
 
@@ -20,10 +31,37 @@
 // Handling a remote notification when an app is already running and the app intend to background-download data via pushes
 - (void)application:(UIApplication *) application didReceiveRemoteNotification:(NSDictionary *) notification fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
-    if (application.applicationState == UIApplicationStateActive) {
-        NSLog(@"did receive remote notification while app is running in foreground ... ");
+    NSDictionary *aps =[notification objectForKey:@"aps"];
+    NSLog(@"aps data: %@", aps);
+    NSString *text_en =[aps objectForKey:@"text_en"];
+    NSLog(@"text english: %@", text_en);
+    NSString *text_zhTw =[aps objectForKey:@"text_zhTw"];
+    NSLog(@"text trad. chinese: %@", text_zhTw);
+    
+    if (application.applicationState == UIApplicationStateInactive || application.applicationState == UIApplicationStateBackground) {
+        NSLog(@"did receive remote notification while app is inactive or background ... ");
+        
+        // Intercept the notification data and raise the local notification a second after received
+        UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:1];
+        localNotification.alertBody = @"Yeh, here we go...";
+        localNotification.timeZone = [NSTimeZone defaultTimeZone];
+        localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+        
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+        
     } else {
-        NSLog(@"did receive remote notification ... "); // this log will only be shown if user click on the push notification
+        NSLog(@"did receive remote notification while app is running in foreground ... ");
+        
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Push Notification"
+                                                                       message:@"Yeh, here we go..."
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
     }
     
     // Must be called when finished
