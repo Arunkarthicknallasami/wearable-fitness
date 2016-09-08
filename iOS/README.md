@@ -32,6 +32,7 @@ CocoaPods provides a convenient mechanism for merging 3rd party modules/librarie
 
 10. Future update of dependencies to new version in Podfile, require to update the local repo <br/>
 <i>pod repo update</i><br/>
+<i>pod update</i><br/>
 <i>pod install</i> <br/>
 
 11. Upgrade of Cocoapods to beta version <br/>
