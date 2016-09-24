@@ -9,11 +9,11 @@ use_frameworks!
 
 
 def main
-    pod 'SalesforceSDKCore', '~> 4.3.0'
-    pod 'SalesforceNetwork', '~> 4.3.0'
-    pod 'SalesforceRestAPI', '~> 4.3.0'
-    pod 'SmartStore', '~> 4.3.0'
-    pod 'SmartSync', '~> 4.3.0'
+    pod 'SalesforceSDKCore', '~> 4.3.1'
+    pod 'SalesforceNetwork', '~> 4.3.1'
+    pod 'SalesforceRestAPI', '~> 4.3.1'
+    pod 'SmartStore', '~> 4.3.1'
+    pod 'SmartSync', '~> 4.3.1'
     
     ui_dependencies
 end

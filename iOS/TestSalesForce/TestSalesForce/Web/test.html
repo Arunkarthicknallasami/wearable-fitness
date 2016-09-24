@@ -1,0 +1,26 @@
+<html>
+    
+    <head>
+        <meta name="viewport" content="initial-scale=1.0">
+            <script language="javascript">
+                function test1() {
+                    window.location = encodeURI("jeffreygarcia://custom.scheme?function=openApp&page=A");
+                }
+                function test2() {
+                    window.location = encodeURI("jeffreygarcia://custom.scheme?function=openApp&page=B");
+                }
+                function test3() {
+                    window.location = encodeURI("jeffreygarcia://custom.scheme?function=openUrl&url=https://www.google.com");
+                }
+            </script>
+    </head>
+    
+    <body>
+        <a href="javascript:test1()">Launch App - View A</a>
+        <br>
+        <a href="javascript:test2()">Launch App - View B</a>
+        <br>
+        <a href="javascript:test3()">Browse Google Website</a>
+    </body>
+    
+</html>

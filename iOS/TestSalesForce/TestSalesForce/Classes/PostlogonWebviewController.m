@@ -7,6 +7,9 @@
 //
 
 #import "PostlogonWebviewController.h"
+#import "CustomWKWebView.m"
+
+#import <WebKit/WebKit.h>
 
 @interface PostlogonWebviewController ()
 
@@ -15,6 +18,7 @@
 @implementation PostlogonWebviewController
 
 UIWebView *webView;
+WKWebView *wkWebView;
 
 - (void)viewDidDisappear:(BOOL)animated
 {
@@ -29,20 +33,26 @@ UIWebView *webView;
     
     //Change self.view.bounds to a smaller CGRect if you don't want it to take up the whole screen
     webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    wkWebView = [[CustomWKWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     
     //Set the delegate
     webView.delegate = self;
+    wkWebView.navigationDelegate = self;
     
     //Set the webview as invisible
     //webView.hidden = YES;
     webView.hidden = NO;
+    wkWebView.hidden = NO;
     
     //Set the webview to auto-resize with its parent view
     self.view.autoresizesSubviews = YES;
     webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    wkWebView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     //Add to the UI
     [self.view addSubview:webView];
+    //[self.view addSubview:wkWebView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -50,14 +60,15 @@ UIWebView *webView;
     // get localized path for file from app bundle
     NSString *path;
     NSBundle *mainBundle = [NSBundle mainBundle];
-    path = [mainBundle pathForResource:@"test_css" ofType:@"html"];
+    path = [mainBundle pathForResource:@"test" ofType:@"html"];
     
     // make a file: URL out of the path
-    //NSURL *theUrl = [NSURL fileURLWithPath:path];
-    //[webView loadRequest:[NSURLRequest requestWithURL:theUrl]];
+    NSURL *theUrl = [NSURL fileURLWithPath:path];
+    [webView loadRequest:[NSURLRequest requestWithURL:theUrl]];
     
     // need to do this every time this view appears so that the "home" link keeps working
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com.hk"]]];
+    //[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.google.com.hk"]]];
+    //[wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.amazon.com"]]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,8 +78,6 @@ UIWebView *webView;
 // webview delegate methods support
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    NSLog(@"scheme = %@",[[request URL] scheme]);
-    
     // intercept the webview URL
     NSURL *reqURL = [request URL];
     NSString *urlString = [reqURL absoluteString];
@@ -78,12 +87,11 @@ UIWebView *webView;
    	NSLog(@"%@ - URL host: %@", NSStringFromClass([self class]), [reqURL host]);
     NSLog(@"%@ - NavigationType: %li", NSStringFromClass([self class]), (long)navigationType);
     
-    if ([[reqURL scheme] isEqualToString:@"custom"]) {
-        NSDictionary *functionParserParams = [self getParams:request];
-        NSDictionary *functionParams = [NSDictionary dictionaryWithDictionary:functionParserParams];
+    if ([[reqURL scheme] isEqualToString:@"jeffreygarcia"]) {
+        NSDictionary *functionParams = [self parseQueryString:[reqURL query]];
         
         // aysn notify to process NonHTTPRequest after 1/10 sec.
-        [self performSelector:@selector(processNonHTTPRequest:) withObject:functionParams afterDelay:0.1];
+        [self performSelector:@selector(processNonHTTPRequest:withUrl:) withObject:functionParams withObject:urlString];
         return NO;
     }
     
@@ -108,53 +116,49 @@ UIWebView *webView;
     NSLog(@"%@ - webView didFailLoadWithError", NSStringFromClass([self class]));
 }
 
-- (NSDictionary *)getParams:(NSURLRequest*)request
-{
+- (NSDictionary *)parseQueryString:(NSString *)query {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    NSArray *pairs = [query componentsSeparatedByString:@"&"];
     
-    NSString *urlString = [[request URL] absoluteString];
-    urlString = [urlString substringWithRange:NSMakeRange([@"hsbc://" length],[urlString length] - [@"hsbc://" length])];
-    urlString = [self urlDecode:urlString];
-    NSLog(@"%@ - decoded URL String to process: %@", NSStringFromClass([self class]), urlString);
-    
-    NSMutableDictionary *paramDictionary = [self parseUrlString:urlString];
-    
-    return paramDictionary;
+    for (NSString *pair in pairs) {
+        NSArray *elements = [pair componentsSeparatedByString:@"="];
+        NSString *key = [[elements objectAtIndex:0] stringByRemovingPercentEncoding];
+        NSString *val = [[elements objectAtIndex:1] stringByRemovingPercentEncoding];
+        
+        [dict setObject:val forKey:key];
+    }
+    return dict;
 }
 
 - (NSString *)urlDecode:(NSString *)str
 {
-    NSString *url = (NSString *) CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
-                                                                                                              (CFStringRef) str,
-                                                                                                              CFSTR(""),
-                                                                                                              kCFStringEncodingUTF8));
+    NSString *url = (NSString *) CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(
+                                                        NULL,
+                                                        (CFStringRef) str, CFSTR(""),
+                                                        kCFStringEncodingUTF8)
+                                                   );
     return url;
 }
 
-- (NSMutableDictionary *)parseUrlString:(NSString*)message
+- (void)processNonHTTPRequest:(NSDictionary *)functionParams withUrl:(NSString *)urlString
 {
-    NSArray *params = [message componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"&="]];
-    
-    NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
-    for (int i=0; i+1 < [params count]; i = i+2) {
-        [mutableDictionary setObject:[[params objectAtIndex:i+1] stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding] forKey:[params objectAtIndex:i]];
-    }
-    
-    return mutableDictionary;
-}
-
-- (void)processNonHTTPRequest:(NSDictionary *)functionParams
-{
-    NSString *functionName = [functionParams valueForKey:@"function"];
-    NSLog(@"%@ - Hook API called: %@", NSStringFromClass([self class]), functionName);
+    NSString *function = [functionParams valueForKey:@"function"];
+    NSLog(@"%@ - Function called: %@", NSStringFromClass([self class]), function);
     NSLog(@"%@ - Parameters: %@", NSStringFromClass([self class]), [functionParams description]);
     
-    if ([functionName isEqualToString:@"openInApp"])
+    if ([function isEqualToString:@"openApp"])
     {
-        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com.hk"]]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+        return;
+    }
+    
+    if ([function isEqualToString:@"openUrl"])
+    {
+        // simply open the URL in the webview
+        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:functionParams[@"url"]]]];
         return;
     }
 }
-
 
 @end
 

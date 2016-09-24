@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="hgh-IM-Toy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC4-AR-GMP">
+                    <frame key="frameInset" minX="127" minY="69" width="105" height="30"/>
+                    <color key="backgroundColor" red="0.874856839" green="0.874856839" blue="0.874856839" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="lKV-QW-eub"/>
+                    </constraints>
+                    <state key="normal" title="View A">
+                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjQ-Bh-Ud7">
+                    <frame key="frameInset" minX="127" minY="141" width="105" height="30"/>
+                    <color key="backgroundColor" red="0.874856839" green="0.874856839" blue="0.874856839" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Pd5-g1-nbr"/>
+                    </constraints>
+                    <state key="normal" title="View B"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dC4-AR-GMP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="Xu6-Bb-lFx"/>
+                <constraint firstItem="SjQ-Bh-Ud7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="iJs-Yb-Lle"/>
+                <constraint firstItem="SjQ-Bh-Ud7" firstAttribute="top" secondItem="dC4-AR-GMP" secondAttribute="bottom" constant="20" id="nNc-Me-zcy"/>
+                <constraint firstItem="dC4-AR-GMP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tCO-iq-NvP"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="-85.5" y="98.5"/>
+        </view>
+    </objects>
+</document>

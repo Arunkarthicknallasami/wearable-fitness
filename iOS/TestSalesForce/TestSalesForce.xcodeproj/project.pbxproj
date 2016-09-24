@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0003C67E1D90C48D00AB124C /* CustomURLProtocol.h in Sources */ = {isa = PBXBuildFile; fileRef = 0003C67D1D90C48D00AB124C /* CustomURLProtocol.h */; };
+		0003C6801D90C64E00AB124C /* CustomURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0003C67F1D90C64E00AB124C /* CustomURLProtocol.m */; };
 		001A9BBD1D71835800C01E59 /* PostlogonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001A9BBC1D71835800C01E59 /* PostlogonViewController.xib */; };
 		001A9BBF1D718B3E00C01E59 /* PrelogonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001A9BBE1D718B3E00C01E59 /* PrelogonViewController.xib */; };
 		0025812D1D70217800060DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0025812C1D70217800060DB3 /* Assets.xcassets */; };
@@ -19,6 +21,7 @@
 		0025813F1D7021F600060DB3 /* RestAPIExplorerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0025813E1D7021F600060DB3 /* RestAPIExplorerViewController.xib */; };
 		002581441D70220D00060DB3 /* QueryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002581411D70220D00060DB3 /* QueryListViewController.m */; };
 		002581451D70220D00060DB3 /* RestApiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002581431D70220D00060DB3 /* RestApiViewController.m */; };
+		00289D8A1D962FA90054D0C7 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 00289D891D962FA90054D0C7 /* test.html */; };
 		00389BF21D75109C00E03434 /* RestApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00389BF11D75109C00E03434 /* RestApiViewController.xib */; };
 		00DA70CF1D6D555600B4DCB1 /* TestSalesForceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA70CE1D6D555600B4DCB1 /* TestSalesForceTests.m */; };
 		00DA70DA1D6D555600B4DCB1 /* TestSalesForceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA70D91D6D555600B4DCB1 /* TestSalesForceUITests.m */; };
@@ -44,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0003C67C1D90C36000AB124C /* TestSalesForce.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestSalesForce.entitlements; sourceTree = "<group>"; };
+		0003C67D1D90C48D00AB124C /* CustomURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomURLProtocol.h; path = Classes/CustomURLProtocol.h; sourceTree = "<group>"; };
+		0003C67F1D90C64E00AB124C /* CustomURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomURLProtocol.m; path = Classes/CustomURLProtocol.m; sourceTree = "<group>"; };
+		0003C68F1D9245CA00AB124C /* CustomWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomWKWebView.m; path = Classes/CustomWKWebView.m; sourceTree = "<group>"; };
+		0003C6901D92472000AB124C /* CustomWKWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CustomWKWebView.h; path = Classes/CustomWKWebView.h; sourceTree = "<group>"; };
 		001A9BBC1D71835800C01E59 /* PostlogonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostlogonViewController.xib; path = XIB/PostlogonViewController.xib; sourceTree = "<group>"; };
 		001A9BBE1D718B3E00C01E59 /* PrelogonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrelogonViewController.xib; path = XIB/PrelogonViewController.xib; sourceTree = "<group>"; };
 		0025812C1D70217800060DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +70,7 @@
 		002581411D70220D00060DB3 /* QueryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueryListViewController.m; path = Classes/RestAPI/QueryListViewController.m; sourceTree = "<group>"; };
 		002581421D70220D00060DB3 /* RestApiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestApiViewController.h; path = Classes/RestAPI/RestApiViewController.h; sourceTree = "<group>"; };
 		002581431D70220D00060DB3 /* RestApiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestApiViewController.m; path = Classes/RestAPI/RestApiViewController.m; sourceTree = "<group>"; };
+		00289D891D962FA90054D0C7 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = test.html; path = Web/test.html; sourceTree = "<group>"; };
 		00389BF11D75109C00E03434 /* RestApiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RestApiViewController.xib; path = XIB/RestApiViewController.xib; sourceTree = "<group>"; };
 		00DA70B11D6D555600B4DCB1 /* TestSalesForce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSalesForce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DA70CA1D6D555600B4DCB1 /* TestSalesForceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSalesForceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +123,10 @@
 				002581381D7021D000060DB3 /* PrelogonViewController.h */,
 				002581391D7021D000060DB3 /* PrelogonViewController.m */,
 				0025812B1D70211700060DB3 /* RestAPI */,
+				0003C67D1D90C48D00AB124C /* CustomURLProtocol.h */,
+				0003C67F1D90C64E00AB124C /* CustomURLProtocol.m */,
+				0003C68F1D9245CA00AB124C /* CustomWKWebView.m */,
+				0003C6901D92472000AB124C /* CustomWKWebView.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -135,6 +148,14 @@
 				002581431D70220D00060DB3 /* RestApiViewController.m */,
 			);
 			name = RestAPI;
+			sourceTree = "<group>";
+		};
+		00289D881D962F2D0054D0C7 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				00289D891D962FA90054D0C7 /* test.html */,
+			);
+			name = Web;
 			sourceTree = "<group>";
 		};
 		00DA70A81D6D555600B4DCB1 = {
@@ -162,6 +183,8 @@
 		00DA70B31D6D555600B4DCB1 /* TestSalesForce */ = {
 			isa = PBXGroup;
 			children = (
+				00289D881D962F2D0054D0C7 /* Web */,
+				0003C67C1D90C36000AB124C /* TestSalesForce.entitlements */,
 				002581291D701FEB00060DB3 /* Resources */,
 				002581281D701FC600060DB3 /* Classes */,
 				00DA70B41D6D555600B4DCB1 /* Supporting Files */,
@@ -297,6 +320,11 @@
 					00DA70B01D6D555600B4DCB1 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9R44C6UQRU;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					00DA70C91D6D555600B4DCB1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -337,6 +365,7 @@
 				001A9BBF1D718B3E00C01E59 /* PrelogonViewController.xib in Resources */,
 				00389BF21D75109C00E03434 /* RestApiViewController.xib in Resources */,
 				0025812D1D70217800060DB3 /* Assets.xcassets in Resources */,
+				00289D8A1D962FA90054D0C7 /* test.html in Resources */,
 				00DA70E91D6D55F400B4DCB1 /* LaunchScreen.xib in Resources */,
 				0025813F1D7021F600060DB3 /* RestAPIExplorerViewController.xib in Resources */,
 				002581301D7021A100060DB3 /* Info.plist in Resources */,
@@ -372,7 +401,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DC8E81C59CC1842371F1F5DD /* [CP] Copy Pods Resources */ = {
@@ -418,6 +447,8 @@
 				002581441D70220D00060DB3 /* QueryListViewController.m in Sources */,
 				0025813B1D7021D000060DB3 /* PostlogonViewController.m in Sources */,
 				0025813D1D7021D000060DB3 /* PrelogonViewController.m in Sources */,
+				0003C67E1D90C48D00AB124C /* CustomURLProtocol.h in Sources */,
+				0003C6801D90C64E00AB124C /* CustomURLProtocol.m in Sources */,
 				002581451D70220D00060DB3 /* RestApiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +574,7 @@
 			baseConfigurationReference = DC572D213807DC5DB8AEBE76 /* Pods-TestSalesForce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestSalesForce/TestSalesForce.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "TestSalesForce/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -556,6 +588,7 @@
 			baseConfigurationReference = 9EA24838560F67C5F5CC45B3 /* Pods-TestSalesForce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestSalesForce/TestSalesForce.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "TestSalesForce/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

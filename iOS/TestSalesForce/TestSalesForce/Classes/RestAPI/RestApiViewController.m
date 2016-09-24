@@ -88,6 +88,7 @@
     if (view != nil && [view isKindOfClass:[UIButton class]]) {
         self.sendRequestBtn = (UIButton *) view;
         [self.sendRequestBtn addTarget:self action:@selector(sendRestRequest:) forControlEvents:UIControlEventTouchUpInside];
+        //[self.sendRequestBtn addTarget:self action:@selector(sendConcurrentRestRequest:) forControlEvents:UIControlEventTouchUpInside];
     }
 }
 
@@ -123,6 +124,26 @@
      */
 //    SFRestRequest *request = [[SFRestAPI sharedInstance] requestForQuery:@"SELECT Id, Name FROM User LIMIT 1"];
 //    [[SFRestAPI sharedInstance] send:request delegate:self];
+}
+
+- (void)sendConcurrentRestRequest:(UIButton *)sender
+{
+    NSLog(@"%@ - sendConcurrentRestRequest", NSStringFromClass([self class]));
+    
+    NSString *path = self.requestPath.text;
+    NSString *params = self.requestParam.text;
+    NSDictionary *queryParams = ([params length] == 0
+                                 ? nil
+                                 : (NSDictionary *)[SFJsonUtils objectFromJSONString:params]
+                                 );
+    SFRestMethod method = (SFRestMethod)self.requestMethod.selectedSegmentIndex;
+    
+    for (int i = 1; i <= 1000; i++)
+    {
+        NSLog(@"%d", i);
+        SFRestRequest *request = [SFRestRequest requestWithMethod:method path:path queryParams:queryParams];
+        [[SFRestAPI sharedInstance] send:request delegate:self];
+    }
 }
 
 #pragma mark - SFRestDelegate

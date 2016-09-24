@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-@interface PostlogonWebviewController : UIViewController<UIWebViewDelegate>
+@interface PostlogonWebviewController : UIViewController<UIWebViewDelegate, WKNavigationDelegate>
 
 @end
 

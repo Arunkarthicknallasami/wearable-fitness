@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "PostlogonViewController.h"
 #import "PrelogonViewController.h"
+#import "CustomURLProtocol.h"
 
 #import <SalesforceSDKCore/SFJsonUtils.h>
 #import <SalesforceSDKCore/SFLogger.h>
@@ -104,6 +105,9 @@ NSString * sfOAuthRedirectURI;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"%@ - didFinishLaunchingWithOptions", NSStringFromClass([self class]));
     //=== the instantiation of SalesforceSDKManager should have been completed ===//
+    
+    // registered custom protocol class with the URL Loading System to intercept all network requests
+    //[NSURLProtocol registerClass:[CustomURLProtocol class]];
     
     // Override point for customization after application launch.
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
