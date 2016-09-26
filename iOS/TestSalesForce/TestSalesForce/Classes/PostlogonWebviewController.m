@@ -91,7 +91,7 @@ WKWebView *wkWebView;
         NSDictionary *functionParams = [self parseQueryString:[reqURL query]];
         
         // aysn notify to process NonHTTPRequest after 1/10 sec.
-        [self performSelector:@selector(processNonHTTPRequest:withUrl:) withObject:functionParams withObject:urlString];
+        [self performSelector:@selector(processNonHTTPRequest:withUrl:) withObject:functionParams withObject:reqURL];
         return NO;
     }
     
@@ -140,7 +140,7 @@ WKWebView *wkWebView;
     return url;
 }
 
-- (void)processNonHTTPRequest:(NSDictionary *)functionParams withUrl:(NSString *)urlString
+- (void)processNonHTTPRequest:(NSDictionary *)functionParams withUrl:(NSURL *)url
 {
     NSString *function = [functionParams valueForKey:@"function"];
     NSLog(@"%@ - Function called: %@", NSStringFromClass([self class]), function);
@@ -148,7 +148,15 @@ WKWebView *wkWebView;
     
     if ([function isEqualToString:@"openApp"])
     {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+        // test if the URL scheme can be launched (if target app is installed)
+        NSString *customScheme = [NSString stringWithFormat:@"%@%@", [url scheme], @"://"];
+        
+        if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString: customScheme]]) {
+             [[UIApplication sharedApplication] openURL:[NSURL URLWithString: [url absoluteString]]];
+            
+        } else {
+            NSLog(@"Can't use %@", [url scheme]);
+        }
         return;
     }
     

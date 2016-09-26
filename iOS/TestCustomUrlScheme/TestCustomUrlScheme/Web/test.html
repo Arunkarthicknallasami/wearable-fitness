@@ -3,8 +3,12 @@
     <head>
         <meta name="viewport" content="initial-scale=1.0">
             <script language="javascript">
+                function openAppStore() {
+                    window.location="http://www.apple.com/hk/itunes/charts/free-apps/";
+                }
                 function test1() {
                     window.location = encodeURI("jeffreygarcia://custom.scheme?function=openApp&page=A");
+                    setTimeout('openAppStore()', 1000);
                 }
                 function test2() {
                     window.location = encodeURI("jeffreygarcia://custom.scheme?function=openApp&page=B");

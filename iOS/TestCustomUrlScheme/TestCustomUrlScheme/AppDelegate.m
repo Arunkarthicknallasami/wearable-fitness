@@ -102,7 +102,7 @@
 
 - (BOOL)processUrl:(NSDictionary *) dict {
     NSString *url = dict[@"url"];
-    // launch the OS browser and navigate to the URL
+    // launch the OS browser (default is Safari) and navigate to the URL
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: url] options:@{} completionHandler:nil];
     return YES;
 }
