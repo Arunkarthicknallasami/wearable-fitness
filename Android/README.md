@@ -11,7 +11,8 @@
   - SalesforceSDK
   - SmartStore
   - SmartSync
-<br>
+
+<br/><br/>
 
 <b>3rd Party Libraries Dependencies</b>
 - Google GSON (com.google.code.gson:gson:2.7)
@@ -19,7 +20,8 @@
 - okHTTP (com.squareup.okhttp3:okhttp:3.2.0) required by SalesforceSDK
 - okio (com.squareup.okio:okio:1.9.0) required by SalesforceSDK
 - SQLCipher (net.zetetic:android-database-sqlcipher:3.5.2) required by SmartStore
-<br>
+
+<br/><br/>
 
 # References:
 
@@ -55,13 +57,9 @@
 - https://developer.android.com/wear/preview/features/notifications.html <br/>
 - http://www.samsung.com/us/support/answer/ANS00032965/ <br/>
 
-<br/>
-
 <b>Samsung S-Health SDK</b>
 - http://shealth.samsung.com/ <br/>
 - http://developer.samsung.com/health <br/>
-
-<br/>
 
 <b>Baidu Push Notification SDK</b>
 - https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-baidu-china-android-notifications-get-started/ <br/>
