@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/menu/sf__login.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/menu/sf__login.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/menu/sf__clear_custom_url.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/menu/sf__clear_custom_url.xml"
+    }
+]

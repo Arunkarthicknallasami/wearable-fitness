@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/debug/xml/servers.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/xml/servers.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/debug/xml/app_restrictions.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/xml/app_restrictions.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/debug/xml/authenticator.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/xml/authenticator.xml"
+    }
+]

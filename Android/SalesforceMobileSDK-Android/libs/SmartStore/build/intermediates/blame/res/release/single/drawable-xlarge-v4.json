@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__oauth_container_dropshadow.9.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__oauth_container_dropshadow.9.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__header_refresh_states.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__header_refresh_states.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__refresh_loader.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__refresh_loader.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__header_drop_shadow.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__header_drop_shadow.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__header_left_border.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__header_left_border.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__oauth_background.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__oauth_background.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__header_right_border.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__header_right_border.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__progress_spinner.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__progress_spinner.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__header_bg.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__header_bg.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__header_refresh_press.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__header_refresh_press.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__login_content_header.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__login_content_header.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__nav_shadow.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__nav_shadow.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__toolbar_background.xml",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__toolbar_background.xml"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-xlarge-v4/sf__header_refresh.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xlarge-v4/sf__header_refresh.png"
+    }
+]

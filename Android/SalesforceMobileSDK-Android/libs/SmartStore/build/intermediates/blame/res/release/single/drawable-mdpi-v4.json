@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-mdpi-v4/sf__highlight_glare.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-mdpi-v4/sf__highlight_glare.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-mdpi-v4/sf__edit_icon.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-mdpi-v4/sf__edit_icon.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-mdpi-v4/sf__icon.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-mdpi-v4/sf__icon.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/res/merged/release/drawable-mdpi-v4/sf__ic_refresh_sync_anim0.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-mdpi-v4/sf__ic_refresh_sync_anim0.png"
+    }
+]

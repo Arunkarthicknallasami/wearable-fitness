@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartSync/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_fp_40px.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartSync/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xxhdpi-v4/ic_fp_40px.png"
+    },
+    {
+        "merged": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartSync/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/sf__icon.png",
+        "source": "/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartSync/build/intermediates/exploded-aar/TestSalesforce/SalesforceSDK/unspecified/res/drawable-xxhdpi-v4/sf__icon.png"
+    }
+]
