@@ -19,6 +19,7 @@
 - okHTTP (com.squareup.okhttp3:okhttp:3.2.0) required by SalesforceSDK
 - okio (com.squareup.okio:okio:1.9.0) required by SalesforceSDK
 - SQLCipher (net.zetetic:android-database-sqlcipher:3.5.2) required by SmartStore
+<br>
 
 # References:
 
@@ -31,8 +32,6 @@
 <b>Disabling TLS 1.0: Preparing Mobile SDK Apps for the Big Change</b>
 - https://developer.salesforce.com/blogs/engineering/2016/03/disabling-tls-1-0-preparing-mobile-sdk-apps-big-change.html <br/>
 
-<br/>
-
 <b>Google Fit API</b>
 - https://developers.google.com/fit/android/?hl=zh-TW <br/>
 - https://developers.google.com/fit/android/get-started?hl=zh-TW#step_5_connect_to_the_fitness_service <br/>
@@ -41,14 +40,10 @@
 - https://developers.google.com/fit/android/samples <br/>
 - https://developers.google.com/android/guides/http-auth <br/>
 - https://developers.google.com/android/guides/api-client#access_the_wearable_api <br/>
-- https://support.google.com/fit/?hl=en#6075067 <br/> 
-
-<br/>
+- https://support.google.com/fit/?hl=en#6075067  
 
 <b>Firebase Cloud Messaging (FCM)</b>
-- https://developers.google.com/cloud-messaging/android/android-migrate-fcm
-
-<br/>
+- https://developers.google.com/cloud-messaging/android/android-migrate-fcm <br/>
 
 <b>Push Notification for Wearable</b>
 - https://developer.android.com/wear/index.html <br/>
