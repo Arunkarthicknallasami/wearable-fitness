@@ -12,7 +12,7 @@
   - SmartStore
   - SmartSync
 
-<br/><br/>
+<br/>
 
 <b>3rd Party Libraries Dependencies</b>
 - Google GSON (com.google.code.gson:gson:2.7)
