@@ -1,4 +1,37 @@
+# Android Build
+
+<b>Development Environment</b>
+- Android Studio 2.1 or higher
+- Android SDK 23 (Salesforce SDK 4.3 not yet support Android SDK 24)
+- Android SDK Build Tools 23.0 or higher
+- Gradle 2.10 or higher
+- JDK 1.8 or higher
+- Maven 3.0.5
+- Salesforce SDK for Android 4.3 
+  - SalesforceSDK
+  - SmartStore
+  - SmartSync
+<br>
+
+<b>3rd Party Libraries Dependencies</b>
+- Google GSON (com.google.code.gson:gson:2.7)
+- Guaba (com.google.guava:guava:18.0) required by SalesforceSDK
+- okHTTP (com.squareup.okhttp3:okhttp:3.2.0) required by SalesforceSDK
+- okio (com.squareup.okio:okio:1.9.0) required by SalesforceSDK
+- SQLCipher (net.zetetic:android-database-sqlcipher:3.5.2) required by SmartStore
+
 # References:
+
+<b>Salesforce Mobile SDK (news and update)</b>
+- https://developer.salesforce.com/page/Mobile <br/>
+
+<b>Salesforce SDK for Android</b>
+- https://github.com/forcedotcom/SalesforceMobileSDK-Android <br/>
+
+<b>Disabling TLS 1.0: Preparing Mobile SDK Apps for the Big Change</b>
+- https://developer.salesforce.com/blogs/engineering/2016/03/disabling-tls-1-0-preparing-mobile-sdk-apps-big-change.html <br/>
+
+<br/>
 
 <b>Google Fit API</b>
 - https://developers.google.com/fit/android/?hl=zh-TW <br/>
