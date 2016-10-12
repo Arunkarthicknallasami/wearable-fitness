@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0080D99D1DA5CF3800DE2105 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080D99C1DA5CF3800DE2105 /* AppDelegate.swift */; };
+		0080D99F1DA5CF3800DE2105 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080D99E1DA5CF3800DE2105 /* ViewController.swift */; };
+		0080D9A21DA5CF3800DE2105 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0080D9A01DA5CF3800DE2105 /* Main.storyboard */; };
+		0080D9A51DA5CF3800DE2105 /* TestScheduler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0080D9A31DA5CF3800DE2105 /* TestScheduler.xcdatamodeld */; };
+		0080D9A71DA5CF3800DE2105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0080D9A61DA5CF3800DE2105 /* Assets.xcassets */; };
+		0080D9AA1DA5CF3800DE2105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0080D9A81DA5CF3800DE2105 /* LaunchScreen.storyboard */; };
+		0080D9B51DA5CF3800DE2105 /* TestSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080D9B41DA5CF3800DE2105 /* TestSchedulerTests.swift */; };
+		0080D9C01DA5CF3800DE2105 /* TestSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080D9BF1DA5CF3800DE2105 /* TestSchedulerUITests.swift */; };
+		0080D9CF1DA5FDE800DE2105 /* SchedulerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080D9CE1DA5FDE800DE2105 /* SchedulerService.swift */; };
+		0080D9D11DA606B000DE2105 /* TimerTaskAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080D9D01DA606B000DE2105 /* TimerTaskAction.swift */; };
+		0080D9D31DA608B500DE2105 /* TimerTaskObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080D9D21DA608B500DE2105 /* TimerTaskObserver.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0080D9B11DA5CF3800DE2105 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0080D9911DA5CF3700DE2105 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0080D9981DA5CF3800DE2105;
+			remoteInfo = TestScheduler;
+		};
+		0080D9BC1DA5CF3800DE2105 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0080D9911DA5CF3700DE2105 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0080D9981DA5CF3800DE2105;
+			remoteInfo = TestScheduler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0080D9991DA5CF3800DE2105 /* TestScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0080D99C1DA5CF3800DE2105 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0080D99E1DA5CF3800DE2105 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0080D9A11DA5CF3800DE2105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0080D9A41DA5CF3800DE2105 /* TestScheduler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestScheduler.xcdatamodel; sourceTree = "<group>"; };
+		0080D9A61DA5CF3800DE2105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0080D9A91DA5CF3800DE2105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0080D9AB1DA5CF3800DE2105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0080D9B01DA5CF3800DE2105 /* TestSchedulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSchedulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0080D9B41DA5CF3800DE2105 /* TestSchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSchedulerTests.swift; sourceTree = "<group>"; };
+		0080D9B61DA5CF3800DE2105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0080D9BB1DA5CF3800DE2105 /* TestSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0080D9BF1DA5CF3800DE2105 /* TestSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSchedulerUITests.swift; sourceTree = "<group>"; };
+		0080D9C11DA5CF3800DE2105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0080D9CE1DA5FDE800DE2105 /* SchedulerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SchedulerService.swift; path = Scheduler/SchedulerService.swift; sourceTree = "<group>"; };
+		0080D9D01DA606B000DE2105 /* TimerTaskAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerTaskAction.swift; path = Scheduler/TimerTaskAction.swift; sourceTree = "<group>"; };
+		0080D9D21DA608B500DE2105 /* TimerTaskObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerTaskObserver.swift; path = Scheduler/TimerTaskObserver.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0080D9961DA5CF3800DE2105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0080D9AD1DA5CF3800DE2105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0080D9B81DA5CF3800DE2105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0080D9901DA5CF3700DE2105 = {
+			isa = PBXGroup;
+			children = (
+				0080D99B1DA5CF3800DE2105 /* TestScheduler */,
+				0080D9B31DA5CF3800DE2105 /* TestSchedulerTests */,
+				0080D9BE1DA5CF3800DE2105 /* TestSchedulerUITests */,
+				0080D99A1DA5CF3800DE2105 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0080D99A1DA5CF3800DE2105 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0080D9991DA5CF3800DE2105 /* TestScheduler.app */,
+				0080D9B01DA5CF3800DE2105 /* TestSchedulerTests.xctest */,
+				0080D9BB1DA5CF3800DE2105 /* TestSchedulerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0080D99B1DA5CF3800DE2105 /* TestScheduler */ = {
+			isa = PBXGroup;
+			children = (
+				0080D9CD1DA5FD8400DE2105 /* Scheduler */,
+				0080D99C1DA5CF3800DE2105 /* AppDelegate.swift */,
+				0080D99E1DA5CF3800DE2105 /* ViewController.swift */,
+				0080D9A01DA5CF3800DE2105 /* Main.storyboard */,
+				0080D9A61DA5CF3800DE2105 /* Assets.xcassets */,
+				0080D9A81DA5CF3800DE2105 /* LaunchScreen.storyboard */,
+				0080D9AB1DA5CF3800DE2105 /* Info.plist */,
+				0080D9A31DA5CF3800DE2105 /* TestScheduler.xcdatamodeld */,
+			);
+			path = TestScheduler;
+			sourceTree = "<group>";
+		};
+		0080D9B31DA5CF3800DE2105 /* TestSchedulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0080D9B41DA5CF3800DE2105 /* TestSchedulerTests.swift */,
+				0080D9B61DA5CF3800DE2105 /* Info.plist */,
+			);
+			path = TestSchedulerTests;
+			sourceTree = "<group>";
+		};
+		0080D9BE1DA5CF3800DE2105 /* TestSchedulerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0080D9BF1DA5CF3800DE2105 /* TestSchedulerUITests.swift */,
+				0080D9C11DA5CF3800DE2105 /* Info.plist */,
+			);
+			path = TestSchedulerUITests;
+			sourceTree = "<group>";
+		};
+		0080D9CD1DA5FD8400DE2105 /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				0080D9CE1DA5FDE800DE2105 /* SchedulerService.swift */,
+				0080D9D01DA606B000DE2105 /* TimerTaskAction.swift */,
+				0080D9D21DA608B500DE2105 /* TimerTaskObserver.swift */,
+			);
+			name = Scheduler;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0080D9981DA5CF3800DE2105 /* TestScheduler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0080D9C41DA5CF3800DE2105 /* Build configuration list for PBXNativeTarget "TestScheduler" */;
+			buildPhases = (
+				0080D9951DA5CF3800DE2105 /* Sources */,
+				0080D9961DA5CF3800DE2105 /* Frameworks */,
+				0080D9971DA5CF3800DE2105 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestScheduler;
+			productName = TestScheduler;
+			productReference = 0080D9991DA5CF3800DE2105 /* TestScheduler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0080D9AF1DA5CF3800DE2105 /* TestSchedulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0080D9C71DA5CF3800DE2105 /* Build configuration list for PBXNativeTarget "TestSchedulerTests" */;
+			buildPhases = (
+				0080D9AC1DA5CF3800DE2105 /* Sources */,
+				0080D9AD1DA5CF3800DE2105 /* Frameworks */,
+				0080D9AE1DA5CF3800DE2105 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0080D9B21DA5CF3800DE2105 /* PBXTargetDependency */,
+			);
+			name = TestSchedulerTests;
+			productName = TestSchedulerTests;
+			productReference = 0080D9B01DA5CF3800DE2105 /* TestSchedulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0080D9BA1DA5CF3800DE2105 /* TestSchedulerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0080D9CA1DA5CF3800DE2105 /* Build configuration list for PBXNativeTarget "TestSchedulerUITests" */;
+			buildPhases = (
+				0080D9B71DA5CF3800DE2105 /* Sources */,
+				0080D9B81DA5CF3800DE2105 /* Frameworks */,
+				0080D9B91DA5CF3800DE2105 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0080D9BD1DA5CF3800DE2105 /* PBXTargetDependency */,
+			);
+			name = TestSchedulerUITests;
+			productName = TestSchedulerUITests;
+			productReference = 0080D9BB1DA5CF3800DE2105 /* TestSchedulerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0080D9911DA5CF3700DE2105 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Jeffrey Garcia";
+				TargetAttributes = {
+					0080D9981DA5CF3800DE2105 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9R44C6UQRU;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					0080D9AF1DA5CF3800DE2105 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9R44C6UQRU;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0080D9981DA5CF3800DE2105;
+					};
+					0080D9BA1DA5CF3800DE2105 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9R44C6UQRU;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0080D9981DA5CF3800DE2105;
+					};
+				};
+			};
+			buildConfigurationList = 0080D9941DA5CF3700DE2105 /* Build configuration list for PBXProject "TestScheduler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0080D9901DA5CF3700DE2105;
+			productRefGroup = 0080D99A1DA5CF3800DE2105 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0080D9981DA5CF3800DE2105 /* TestScheduler */,
+				0080D9AF1DA5CF3800DE2105 /* TestSchedulerTests */,
+				0080D9BA1DA5CF3800DE2105 /* TestSchedulerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0080D9971DA5CF3800DE2105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0080D9AA1DA5CF3800DE2105 /* LaunchScreen.storyboard in Resources */,
+				0080D9A71DA5CF3800DE2105 /* Assets.xcassets in Resources */,
+				0080D9A21DA5CF3800DE2105 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0080D9AE1DA5CF3800DE2105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0080D9B91DA5CF3800DE2105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0080D9951DA5CF3800DE2105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0080D9D11DA606B000DE2105 /* TimerTaskAction.swift in Sources */,
+				0080D9A51DA5CF3800DE2105 /* TestScheduler.xcdatamodeld in Sources */,
+				0080D9D31DA608B500DE2105 /* TimerTaskObserver.swift in Sources */,
+				0080D9CF1DA5FDE800DE2105 /* SchedulerService.swift in Sources */,
+				0080D99F1DA5CF3800DE2105 /* ViewController.swift in Sources */,
+				0080D99D1DA5CF3800DE2105 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0080D9AC1DA5CF3800DE2105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0080D9B51DA5CF3800DE2105 /* TestSchedulerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0080D9B71DA5CF3800DE2105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0080D9C01DA5CF3800DE2105 /* TestSchedulerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0080D9B21DA5CF3800DE2105 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0080D9981DA5CF3800DE2105 /* TestScheduler */;
+			targetProxy = 0080D9B11DA5CF3800DE2105 /* PBXContainerItemProxy */;
+		};
+		0080D9BD1DA5CF3800DE2105 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0080D9981DA5CF3800DE2105 /* TestScheduler */;
+			targetProxy = 0080D9BC1DA5CF3800DE2105 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0080D9A01DA5CF3800DE2105 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0080D9A11DA5CF3800DE2105 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0080D9A81DA5CF3800DE2105 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0080D9A91DA5CF3800DE2105 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0080D9C21DA5CF3800DE2105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0080D9C31DA5CF3800DE2105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0080D9C51DA5CF3800DE2105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9R44C6UQRU;
+				INFOPLIST_FILE = TestScheduler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestScheduler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0080D9C61DA5CF3800DE2105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9R44C6UQRU;
+				INFOPLIST_FILE = TestScheduler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestScheduler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0080D9C81DA5CF3800DE2105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9R44C6UQRU;
+				INFOPLIST_FILE = TestSchedulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestScheduler.app/TestScheduler";
+			};
+			name = Debug;
+		};
+		0080D9C91DA5CF3800DE2105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9R44C6UQRU;
+				INFOPLIST_FILE = TestSchedulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestScheduler.app/TestScheduler";
+			};
+			name = Release;
+		};
+		0080D9CB1DA5CF3800DE2105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9R44C6UQRU;
+				INFOPLIST_FILE = TestSchedulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TestScheduler;
+			};
+			name = Debug;
+		};
+		0080D9CC1DA5CF3800DE2105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9R44C6UQRU;
+				INFOPLIST_FILE = TestSchedulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TestScheduler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0080D9941DA5CF3700DE2105 /* Build configuration list for PBXProject "TestScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0080D9C21DA5CF3800DE2105 /* Debug */,
+				0080D9C31DA5CF3800DE2105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0080D9C41DA5CF3800DE2105 /* Build configuration list for PBXNativeTarget "TestScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0080D9C51DA5CF3800DE2105 /* Debug */,
+				0080D9C61DA5CF3800DE2105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0080D9C71DA5CF3800DE2105 /* Build configuration list for PBXNativeTarget "TestSchedulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0080D9C81DA5CF3800DE2105 /* Debug */,
+				0080D9C91DA5CF3800DE2105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0080D9CA1DA5CF3800DE2105 /* Build configuration list for PBXNativeTarget "TestSchedulerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0080D9CB1DA5CF3800DE2105 /* Debug */,
+				0080D9CC1DA5CF3800DE2105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0080D9A31DA5CF3800DE2105 /* TestScheduler.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0080D9A41DA5CF3800DE2105 /* TestScheduler.xcdatamodel */,
+			);
+			currentVersion = 0080D9A41DA5CF3800DE2105 /* TestScheduler.xcdatamodel */;
+			path = TestScheduler.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0080D9911DA5CF3700DE2105 /* Project object */;
+}

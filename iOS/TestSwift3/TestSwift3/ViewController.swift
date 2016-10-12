@@ -35,7 +35,8 @@ class ViewController: UIViewController {
         //testDataTypeParsing2()
         //testGuard(count: nil)
         //testTryCatch(count: nil)
-        testCastDataType()
+        //testCastDataType()
+        testReflection()
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,6 +45,16 @@ class ViewController: UIViewController {
     }
     
     // ============================================================================= //
+    
+    func testReflection() {
+        let test = Test()
+        print("### \(NSStringFromClass(object_getClass(test)))")
+        
+        var testInstance: Test!
+        let testClass = NSClassFromString("TestSwift3.Test") as! Test.Type
+        testInstance = testClass.init()
+        print("result: \(testInstance.testFunction())")
+    }
     
     public struct TestStruct {
         let string: String
