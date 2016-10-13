@@ -67,7 +67,7 @@ WKWebView *wkWebView;
     [webView loadRequest:[NSURLRequest requestWithURL:theUrl]];
     
     // need to do this every time this view appears so that the "home" link keeps working
-    //[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.google.com.hk"]]];
+    //[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.google.com"]]];
     //[wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.amazon.com"]]];
 }
 
