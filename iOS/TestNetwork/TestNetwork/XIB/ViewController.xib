@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="TestNetwork">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="Hl3-WJ-pM2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7f-SS-vV3">
+                    <rect key="frame" x="129.5" y="213" width="116" height="30"/>
+                    <color key="backgroundColor" red="0.874856839" green="0.874856839" blue="0.874856839" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Check Network 1">
+                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ip-F4-SBH">
+                    <rect key="frame" x="128" y="263" width="118" height="30"/>
+                    <color key="backgroundColor" red="0.874856839" green="0.874856839" blue="0.874856839" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Check Network 2"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exj-D5-URi">
+                    <rect key="frame" x="163" y="323" width="50" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8Ip-F4-SBH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1vK-3u-eMp"/>
+                <constraint firstItem="exj-D5-URi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="40H-MW-b5B"/>
+                <constraint firstItem="exj-D5-URi" firstAttribute="top" secondItem="8Ip-F4-SBH" secondAttribute="bottom" constant="30" id="Q6x-Ug-q2C"/>
+                <constraint firstItem="exj-D5-URi" firstAttribute="top" secondItem="X7f-SS-vV3" secondAttribute="bottom" constant="80" id="evX-3r-6xw"/>
+                <constraint firstItem="exj-D5-URi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wEe-Cs-8po"/>
+                <constraint firstItem="X7f-SS-vV3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zLo-yk-yCY"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
