@@ -1,0 +1,93 @@
+fastlane_version "1.107.0"
+
+default_platform :ios
+
+$certs_directory = "ProvisioningProfiles"
+
+$scheme_to_build = 'TestNetwork'
+
+$provisioning_profile =  {
+  'MOVE' => 'iPhone Distribution: Jeffrey Garcia (9R44C6UQRU)'
+}
+
+# Override configurations defined in schema (optional)
+$configurations = {
+  'TestNetwork' => 'Release'
+}
+
+# $global_certificate = {
+#   :name => "TigerspikeEnterprisePrivateKey.p12",
+#   :password => "Billions123"
+# }
+
+$scheme_certificates = {
+#   'Live Adhoc' => { :name => "Certificate.p12" , :password => "password123"},
+}
+
+platform :ios do
+  ############################## PRE ##############################
+
+  before_all do
+   #ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+  end
+
+  ######################### PUBLIC LANES ##########################
+
+  desc "Run all iOS tests on an iPhone"
+  lane :test do
+    # scan(scheme: $scheme_to_build)
+  end
+
+  desc "Build and prepare the app for testing"
+  lane :build_for_test do
+    gym(scheme: $scheme_to_build)
+  end
+
+  desc "Release a new beta version on Hockey"
+  desc "This action does the following:"
+  desc ""
+  desc "- Ensures a clean git status"
+  desc "- Increment the build number"
+  desc "- Build and sign the app"
+  desc "- Upload the ipa file to hockey"
+  desc "- Post a message to slack containing the download link"
+  # desc "- Commit and push the version bump"
+
+  lane :internal do
+    clear_derived_data
+    # scan(scheme: $scheme_to_build)
+    clear_derived_data
+    gym(scheme: $scheme_to_build)
+  end
+
+  lane :deploy do
+    clear_derived_data
+    # scan(scheme: $scheme_to_build)
+    clear_derived_data
+    gym(scheme: $scheme_to_build)
+  end
+
+  ######################### PRIVATE LANES #########################
+
+
+  ############################# UTIL ##############################
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
+
+def version_string(version_number, build_number)
+  "#{version_number}(#{build_number})"
+end
