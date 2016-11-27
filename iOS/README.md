@@ -15,28 +15,31 @@ sudo curl -L https://get.rvm.io | bash -s stable --ruby
 
 4. Upgrade Ruby to 2.2.2 and set to default <br/>
 <i>rvm install ruby-2.2.2</i> <br/>
-<i>rvm --default use ruby-2.2.0</i> <br/>
+<i>rvm --default use ruby-2.2.2</i> <br/>
 <i>ruby -v</i> <br/>
 
 5. Install Cocoa Pods <br/>
 <i>sudo gem install cocoapods</i> <br/>
 
-6. Create a Podfile with default settings <br/>
+6. Setup CocoaPods master repo
+<i>pod setup --verbose</i> <br/>
+
+7. Create a Podfile with default settings <br/>
 <i>pod init</i> <br/>
 
-7. First time download & install Cocoa Pod Dependencies <br/>
+8. First time download & install Cocoa Pod Dependencies <br/>
 <i>pod install</i> <br/>
 
-8. First time running it will create a .cocoapods folder in the HOME directory and download ALL the dependencies of Cocoa Pod itself, so it can take some time to complete, few hours:( <br/>
+9. First time running it will create a .cocoapods folder in the HOME directory and download ALL the dependencies of Cocoa Pod itself, so it can take some time to complete, few hours:( <br/>
 
-9. Make sure to always open the Xcode workspace instead of the project file when building the project <br/> 
+10. Make sure to always open the Xcode workspace instead of the project file when building the project <br/> 
 
-10. Now ready to invoke the API from main project source code <br/>
+11. Now ready to invoke the API from main project source code <br/>
 
-11. Future update of dependencies to new version in Podfile, require to update the local repo <br/>
-<i>pod repo update</i><br/>
-<i>pod update</i><br/>
-<i>pod install</i> <br/>
+12. Future update of dependencies to new version in Podfile, require to update the local repo <br/>
+<i>pod repo update --verbose</i><br/>
+<i>pod update --verbose</i><br/>
+<i>pod install --verbose</i> <br/>
 
 12. Upgrade of Cocoapods to beta version <br/>
 <i>sudo gem uninstall cocoapods</i> <br/>
