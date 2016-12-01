@@ -1,0 +1,2 @@
+include 'forcedroid:libs:SalesforceSDK'
+include 'MyTrailNative'

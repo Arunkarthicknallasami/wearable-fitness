@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SalesforceMobileSDK-Android/libs/SalesforceSDK/SalesforceSDK.iml" filepath="$PROJECT_DIR$/SalesforceMobileSDK-Android/libs/SalesforceSDK/SalesforceSDK.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libs/SmartStore/SmartStore.iml" filepath="$PROJECT_DIR$/libs/SmartStore/SmartStore.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libs/SmartSync/SmartSync.iml" filepath="$PROJECT_DIR$/libs/SmartSync/SmartSync.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SalesforceMobileSDK-Android/libs/SalesforceSDK/SalesforceSDK.iml" filepath="$PROJECT_DIR$/../SalesforceMobileSDK-Android/libs/SalesforceSDK/SalesforceSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SalesforceMobileSDK-Android/libs/SmartStore/SmartStore.iml" filepath="$PROJECT_DIR$/../SalesforceMobileSDK-Android/libs/SmartStore/SmartStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SalesforceMobileSDK-Android/libs/SmartSync/SmartSync.iml" filepath="$PROJECT_DIR$/../SalesforceMobileSDK-Android/libs/SmartSync/SmartSync.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestSalesforce.iml" filepath="$PROJECT_DIR$/TestSalesforce.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
