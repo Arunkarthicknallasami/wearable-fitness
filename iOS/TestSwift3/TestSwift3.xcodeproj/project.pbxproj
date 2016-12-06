@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0030BAA51DF6A2600001DD3D /* TestStructEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0030BAA41DF6A2600001DD3D /* TestStructEnum.swift */; };
+		0030BAA71DF6A6240001DD3D /* TestClassA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0030BAA61DF6A6240001DD3D /* TestClassA.swift */; };
 		0044A05D1D7813A800DD26BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044A05C1D7813A800DD26BA /* AppDelegate.swift */; };
 		0044A05F1D7813A800DD26BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0044A05E1D7813A800DD26BA /* ViewController.swift */; };
 		0044A0621D7813A800DD26BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0044A0601D7813A800DD26BA /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0030BAA41DF6A2600001DD3D /* TestStructEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestStructEnum.swift; sourceTree = "<group>"; };
+		0030BAA61DF6A6240001DD3D /* TestClassA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClassA.swift; sourceTree = "<group>"; };
 		0044A0591D7813A800DD26BA /* TestSwift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSwift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0044A05C1D7813A800DD26BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0044A05E1D7813A800DD26BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				0044A0681D7813A800DD26BA /* Info.plist */,
 				00895D7E1D7C16CF00B47063 /* Data.swift */,
 				006A18B91DAE503A005938F2 /* Test.swift */,
+				0030BAA41DF6A2600001DD3D /* TestStructEnum.swift */,
+				0030BAA61DF6A6240001DD3D /* TestClassA.swift */,
 			);
 			path = TestSwift3;
 			sourceTree = "<group>";
@@ -268,7 +274,9 @@
 			files = (
 				0044A05F1D7813A800DD26BA /* ViewController.swift in Sources */,
 				006A18BA1DAE503A005938F2 /* Test.swift in Sources */,
+				0030BAA51DF6A2600001DD3D /* TestStructEnum.swift in Sources */,
 				00895D7F1D7C16CF00B47063 /* Data.swift in Sources */,
+				0030BAA71DF6A6240001DD3D /* TestClassA.swift in Sources */,
 				0044A05D1D7813A800DD26BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
