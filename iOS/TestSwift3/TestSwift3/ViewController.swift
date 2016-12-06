@@ -36,7 +36,8 @@ class ViewController: UIViewController {
         //testGuard(count: nil)
         //testTryCatch(count: nil)
         //testCastDataType()
-        testReflection()
+        //testReflection()
+        testDate()
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,6 +46,39 @@ class ViewController: UIViewController {
     }
     
     // ============================================================================= //
+    
+    
+    func testDate() {
+        var testDate:Date = Date()
+        print("input: \(testDate)")
+        
+        let dateStringFormatter = DateFormatter()
+        dateStringFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        //dateStringFormatter.locale = NSLocale.init(localeIdentifier: "zh_Hant_HK") as Locale!
+        dateStringFormatter.timeZone = NSTimeZone.system
+        let dateString = dateStringFormatter.string(from: testDate)
+        print(dateString)
+        
+        dateStringFormatter.timeZone = NSTimeZone.system
+        //dateStringFormatter.timeZone = NSTimeZone(abbreviation: "GMT+8") as TimeZone!
+        testDate = dateStringFormatter.date(from: dateString)!
+        print("input (adjusted with local timezone): \(testDate)")
+        
+        //endOfDate(inputDate: testDate!)
+    }
+    
+    func endOfDate(inputDate:Date) {
+        print("input: \(inputDate)")
+        
+        let calendar = Calendar.current
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: inputDate)
+        components.hour = 23
+        components.minute = 59
+        components.second = 59
+        
+        let outputDate:Date = calendar.date(from: components)!
+        print("output: \(outputDate)")
+    }
     
     func testReflection() {
         let test = Test()
