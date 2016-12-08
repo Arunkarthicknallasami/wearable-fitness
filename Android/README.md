@@ -21,6 +21,16 @@
 - okio (com.squareup.okio:okio:1.9.0) required by SalesforceSDK
 - SQLCipher (net.zetetic:android-database-sqlcipher:3.5.2) required by SmartStore
 
+<br/>
+
+# Git Submodule:
+We use git submodule for project dependency management on Android. 
+<b>Creating the submodule</b>
+- git submodule add <i>git_repo_url</i> libs/<i>project_name</i> -b <i>git_branch_name</i> 
+- git config --file=.gitmodules submodule.libs/<i>project_name</i>.branch.<i> <i>git_branch_name</i>
+- git submodule sync
+- git submodule update --remote
+
 <br/><br/>
 
 # References:
