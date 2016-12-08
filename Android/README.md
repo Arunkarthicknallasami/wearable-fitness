@@ -25,9 +25,9 @@
 
 # Git Submodule:
 We use git submodule for project dependency management on Android. 
-<br/><br/>
+<br/>
 
-<b>Creating the submodule</b>
+<b>Creating the submodule</b><br/>
 - git submodule add <i>git_repo_url</i> libs/<i>submodule_name</i> -b <i>git_branch_name</i> 
 - git config --file=.gitmodules submodule.libs/<i>submodule_name</i>.branch.<i> <i>git_branch_name</i>
 - git submodule sync
@@ -35,13 +35,13 @@ We use git submodule for project dependency management on Android.
 
 <br/>
 
-<b>Cloning the repo with fetching the submodule</b>
+<b>Cloning the repo with fetching the submodule</b><br/>
 Recursively clone the repo if the repo has a submodule file. <br/>
 - git clone --recursive <i>git_repo_url</i> -b <i>git_branch_name</i> --single-branch
 
 <br/>
 
-<b>Cloning the repo without fetching the submodule 1</b>
+<b>Cloning the repo without fetching the submodule 1</b><br/>
 Clone the repo without fetching the submodule, use git credential store command to cache the credentials.<br/>
 - git config --global credential.helper store
 - git clone <i>git_repo_url</i> -b <i>git_branch_name</i>
@@ -49,7 +49,7 @@ Clone the repo without fetching the submodule, use git credential store command 
 
 <br/>
 
-<b>Cloning the repo without fetching the submodule 2</b>
+<b>Cloning the repo without fetching the submodule 2</b><br/>
 Clone the repo without fetching the submodule, while username and password are injected at run-time.<br/>
 - git clone <i>git_repo_url</i> -b <i>git_branch_name</i>
 - git config --file=.gitmodules.submodule.libs/<i>submodule_name</i>.url <i>git_repo_url</i>
