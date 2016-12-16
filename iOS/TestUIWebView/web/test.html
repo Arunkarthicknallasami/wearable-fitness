@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <script language="javascript">
+        function urlEncode(url) {
+            if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
+                // for iOS only !!!
+                return escape(url);
+            } else {
+                return url;
+            }
+        }
+    
+        function btnClickedWithTag(tag) {
+            alert("testing - clicked button tag:" + tag);
+            disableBtn();
+        }
+
+        function callbackOpenUrl() {
+            alert("callbackOpenUrl");
+            window.location = "hsbc://" + urlEncode("openInApp");
+        }
+ 
+        function disableBtn() {
+            window.location = "hsbc://" + urlEncode("function=disableBtn&objectTag=1");
+        }
+    
+        function onTextFieldChanged(tag) {
+            alert("testing - changed TextField tag:" + tag);
+        }
+    </script>
+</head>
+
+
+<body>
+    <br><br>
+    <B>TESTING</B>
+
+    <br><br>
+    <br><br>
+    
+    <input type="button" value="test 1" onClick="callbackOpenUrl()">
+    <br>
+
+    <input type="button" value="test_2" onClick="">
+    <br>
+</body>
+
+</html>

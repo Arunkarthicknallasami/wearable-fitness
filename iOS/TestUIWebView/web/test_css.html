@@ -1,0 +1,74 @@
+<html>
+
+<head>
+   
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+<style>
+    .soft_keypad{
+        background-color:#FFFFFF;
+        height:100%;
+        margin:auto;
+        border-spacing: 0px;
+        border-right-color: rgb(178, 178, 178);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-bottom-color: rgb(178, 178, 178);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-left-color: rgb(178, 178, 178);
+        border-left-style: solid;
+        border-left-width: 1px;
+        font-size: 16px;
+        text-align:center;
+        font-weight:bold;
+        color:#666666;
+        -webkit-box-shadow:0px 2px 0px #B2B2B2;
+        z-index:1002;
+    }
+
+.keypad_w_75{
+    width:75%;
+    height:100%;
+}
+
+.keypad_h_25{
+    width:100%;
+    height:25%;
+}
+
+.ui-button-number{
+    width:33.33333333%;
+    float:left;
+}
+
+.singleKey{
+    outline: 1px solid #B2B2B2;
+}
+
+.overoutline{
+    background-color:#FFFFFF;
+}
+</style>
+
+<script type="text/javascript" src="softKeyPad.js"></script>
+
+</head>
+
+<body>
+
+<div class="soft_keypad" style="font-size: 32px; font-weight: lighter;">
+    <div style="width:100%; position:relative;">
+        <div class="keypad_w_75">
+            <div style="width:100%; height:100%">
+                <div class="keypad_h_25">
+                    <div aria-label="1" data-numpad-value="1" class="overoutline singleKey ui-button-number" style="height: 63px; line-height: 63px;">1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
