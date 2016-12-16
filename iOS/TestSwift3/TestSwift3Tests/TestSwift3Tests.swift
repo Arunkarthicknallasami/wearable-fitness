@@ -22,23 +22,138 @@ class TestSwift3Tests: XCTestCase {
         super.tearDown()
     }
     
+    func testInitTimezoneWithLocale() {
+        print("===========================================")
+        
+        let locale = Locale.init(identifier: "zh_Hant_HK") as Locale!
+        let timezone = TimeZone(abbreviation: "zh_Hant_HK")
+        print(timezone)
+        
+        print("===========================================")
+    }
     
+    func testTimeZoneWithOffset() {
+        print("===========================================")
+        
+        let dateString:String = "2016-12-06T16:00:00.000Z"
+        print("input: \(dateString)")
+        
+        let dateStringFormatter = DateFormatter()
+        dateStringFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        
+        let utcDate:Date = dateStringFormatter.date(from: dateString)!
+        print("UTC Date: \(utcDate)") // will be in UTC
+        
+        // This will return nil for certain timezone
+        // https://developer.apple.com/reference/foundation/timezone/2293181-init
+        //let localTimezone = TimeZone(abbreviation: TimeZone.current.abbreviation()!)
+        
+        
+        let localTimezone = NSTimeZone.local as TimeZone
+        print("Local Timezone: \((NSTimeZone.local as NSTimeZone).abbreviation!)")
+        print("Local Timezone: \(localTimezone.abbreviation())")
+        let localGmtOffset:Int = localTimezone.secondsFromGMT(for: utcDate)
+        print("Local GMT Offset: \(localGmtOffset)")
+        let gmtDate = Date(timeInterval: TimeInterval(localGmtOffset), since: utcDate)
+        print("Local Date: \(gmtDate)") // will be in GMT
+        
+        let hkTimezone = TimeZone(abbreviation: "HKT")
+        print("HKT Timezone: \(hkTimezone?.abbreviation())")
+        let hkGmtOffset:Int = hkTimezone!.secondsFromGMT(for: utcDate)
+        print("HKT GMT Offset: \(localGmtOffset)")
+        let hktDate = Date(timeInterval: TimeInterval(hkGmtOffset), since: utcDate)
+        print("HKT Date: \(hktDate)") // will be in HKT
+        
+        let offsetInterval = hkGmtOffset - localGmtOffset
+        print("Offset Interval: \(offsetInterval)")
+        let utcDateWithOffset = Date(timeInterval: TimeInterval(offsetInterval), since: utcDate)
+        print("UTC Date with Offset: \(utcDateWithOffset)")
+        
+        //let utcTimeZone = TimeZone(abbreviation: "UTC")
+        //print("UTC Timezone: \(utcTimeZone)")
+        
+        print("===========================================")
+    }
+    
+    func testDateComponent() {
+        print("===========================================")
+        
+        let calendar = Calendar.current
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: Date())
+        components.hour = 0
+        components.minute = 0
+        let from1 = calendar.date(from: components)!
+        print(from1)
+        
+        let timeInterval = -3600 // minus 1 hour (60 * 60)
+        let from2 = Date(timeInterval: TimeInterval(timeInterval), since: Date())
+        print(from2)
+        
+        print("===========================================")
+    }
+    
+    /**
+     Comparison of Calendar and Date object
+    */
+    func testCalendarToDate() {
+        print("===========================================")
+        
+        let input = Date()
+        print(input)
+        let calendar = Calendar.current
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: input)
+        components.hour = 12
+//        components.minute = 29
+        let output = calendar.date(from: components)!
+        print(output)
+        
+        print("===========================================")
+    }
+    
+    /**
+     Convert of "UTC" date string to UTC date object
+     */
+    func testConvertStringToDate2() {
+        print("===========================================")
+        
+        let dateString:String = "2016-12-06T08:31:49.000Z"
+        print("input: \(dateString)")
+        
+        // if data string is assumed UTC, convert the date back to local system
+        let dateStringFormatter = DateFormatter()
+        dateStringFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        
+        // force specify the data string timezone as UTC, such that to retain the same date/time stamp after converted to UTC data object
+        print("UTC timezone: \(TimeZone(abbreviation: "UTC"))")
+        dateStringFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        
+        let utcDate:Date = dateStringFormatter.date(from: dateString)!
+        print("UTC: \(utcDate)")
+        
+        print("===========================================")
+    }
+    
+    /**
+     Convert local date string (GMT+8) to UTC date object
+     */
     func testConvertStringToDate() {
         print("===========================================")
         
         //let dateString:String = "2016-12-06T10:52:30.111Z"
-        let dateString:String = "2016-11-28T03:50:27.000Z"
+        let dateString:String = "2016-12-06T16:00:00.000Z"
         print("input: \(dateString)")
         
         // system will assume date string in local time zone and default convert to UTC Date if timezone not specify
         let dateStringFormatter = DateFormatter()
-        dateStringFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        dateStringFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
-//        print("locale timezone: \(TimeZone(secondsFromGMT: 8)?.abbreviation())")
+//        print("local timezone: \(TimeZone(secondsFromGMT: 8)?.abbreviation())")
 //        dateStringFormatter.timeZone = TimeZone(secondsFromGMT: 8) // force the timezone to GMT+8
         
-//        print("locala timezone: \(NSTimeZone.local.abbreviation())")
+//        print("local timezone: \(NSTimeZone.local.abbreviation())")
 //        dateStringFormatter.timeZone = TimeZone(abbreviation: NSTimeZone.local.abbreviation()!)
+        
+        dateStringFormatter.locale = NSLocale.init(localeIdentifier: "zh_Hant_HK") as Locale!
         
         let outputDate:Date = dateStringFormatter.date(from: dateString)!
         print("output: \(outputDate)")
@@ -46,6 +161,9 @@ class TestSwift3Tests: XCTestCase {
         print("===========================================")
     }
     
+    /**
+     Convert of UTC date object to local date string (GMT+8)
+    */
     func testConvertDateToString() {
         print("===========================================")
         

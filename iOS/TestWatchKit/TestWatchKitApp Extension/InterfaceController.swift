@@ -84,14 +84,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     /**
      Send data immediately to the phone app. 
-     b
+     
      Note that the counterpart app must be reachable before calling this method 
      while the Phone app is always considered reachable, and calling this method 
      from the Watch app wakes up the Phone app in the background as needed.
      
      Data is transmitted immediately and messages are queued and delivered in 
      the order in which they were sent. These methods must initiate their 
-     transfers in the foreground .
+     transfers in the foreground.
     */
     func sendMessageToPhone() {
         print("\(NSStringFromClass(object_getClass(self))) - sendMessageToPhone")

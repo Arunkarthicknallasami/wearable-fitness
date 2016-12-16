@@ -33,8 +33,9 @@ class ViewController: UIViewController {
             success, error in
             print("HealthKit request permission result: \(success)");
             
-            if !(error != nil) {
-                print("Error: \(error)")
+            guard error == nil else {
+                print("Error while requsting permission: \(error)")
+                return
             }
             
             self.writeData()
@@ -104,9 +105,11 @@ class ViewController: UIViewController {
         let healthKitStore:HKHealthStore = HKHealthStore()
         healthKitStore.save(workout) {
             success, error in
-            print("HealthKit save data result: \(success)");
-            if !(error != nil) {
-                print("Error: \(error)")
+            print("HealthKit write data result: \(success)");
+            
+            guard error == nil else {
+                print("Error while writing data: \(error)")
+                return
             }
         }
     }
