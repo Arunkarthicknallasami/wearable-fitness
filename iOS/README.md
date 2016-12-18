@@ -53,6 +53,10 @@ sudo curl -L https://get.rvm.io | bash -s stable --ruby
 
 <br/>
 
+# Use fastlane for deployment
+
+<br/> <br/>
+
 # Use Xcodebuild command for deployment
 
 1. modify the signing identity in Xcode or directly modifying the project.pbxproj (not recommended), may also need to modify the plist or entitlements file <br/> 
@@ -81,9 +85,9 @@ xcodebuild -exportArchive -archivePath ./build/XXX.xcarchive  -exportOptionsPlis
 
 <br/>
 
-# Use fastlane for deployment
+# Use Swift Package Manager for deployment <br/>
 
-<br/> <br/>
+<br/><br/>
 
 # References:
 
