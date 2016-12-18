@@ -25,21 +25,6 @@ This would includes the development at least the following components: <br/>
 
 <br/>
 
-<b>Facebook Mobile SDK for Android</b>
--  https://developers.facebook.com/quickstarts/ <br/>
--  https://developers.facebook.com/docs/facebook-login/permissions/#reference-public_profile <br/>
--  https://developers.facebook.com/docs/facebook-login/access-tokens <br/>
--  https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension <br/>
--  https://developers.facebook.com/apps/ <br/>
--  https://developers.facebook.com/docs/facebook-login/android <br/>
--  https://developers.facebook.com/docs/facebook-login/android/accesstokens <br/>
--  https://developers.facebook.com/docs/facebook-login/android/permissions <br/>
--  https://developers.facebook.com/docs/android/graph <br/>
--  https://developers.facebook.com/docs/reference/android/current/class/GraphRequest/ <br/>
--  https://developers.facebook.com/tools/explorer <br/>
-
-<br/>
-
 <b>What is Salesforce </b><br/>
 - https://www.salesforce.com/products/what-is-salesforce/ <br/>
 
@@ -77,5 +62,14 @@ This would includes the development at least the following components: <br/>
 - https://developer.salesforce.com/blogs/engineering/2016/01/salesforce-mobile-sdk-4-0-flexible-libraries-native-hybrid-app-development.html <br/>
 - https://trailhead.salesforce.com//trail/mobile_sdk_intro <br/>
 - https://trailhead.salesforce.com/module/mobile_sdk_native_ios <br/>
+
+<b>Salesforce Mobile SDK (news and update)</b>
+- https://developer.salesforce.com/page/Mobile <br/>
+
+<b>Salesforce SDK for Android</b>
+- https://github.com/forcedotcom/SalesforceMobileSDK-Android <br/>
+
+<b>Disabling TLS 1.0: Preparing Mobile SDK Apps for the Big Change</b>
+- https://developer.salesforce.com/blogs/engineering/2016/03/disabling-tls-1-0-preparing-mobile-sdk-apps-big-change.html <br/>
 
 <br/>
