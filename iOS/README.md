@@ -79,7 +79,11 @@ xcodebuild -verbose -workspace ./XXX.xcworkspace -scheme XXX -configuration AppS
 8. create the .ipa with xcodebuild -exportArchive <br/>
 xcodebuild -exportArchive -archivePath ./build/XXX.xcarchive  -exportOptionsPlist ./export/exportOptions.plist -exportPath ./build/export/ <br/>
 
+<br/>
+
 # Use fastlane for deployment
+
+<br/> <br/>
 
 # References:
 
