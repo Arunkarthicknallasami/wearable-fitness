@@ -108,6 +108,10 @@ xcodebuild -exportArchive -archivePath ./build/XXX.xcarchive  -exportOptionsPlis
 - https://github.com/apple/swift-evolution <br/>
 - https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md <br/>
 
+<b>Swift Package Manager</b> <br/>
+- https://swift.org/package-manager/#community-proposal <br/>
+- https://github.com/apple/swift-package-manager <br/>
+
 <b>WatchKit</b> <br/>
 - https://developer.apple.com/library/content/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html?utm_source=designernews <br/>
 - https://developer.apple.com/reference/watchconnectivity/wcsession <br/>
