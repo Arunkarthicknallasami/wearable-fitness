@@ -23,8 +23,6 @@ This would includes the development at least the following components: <br/>
 - https://developers.google.com/identity/protocols/OAuth2 <br/>
 - https://developers.google.com/oauthplayground/ <br/>
 
-<br/>
-
 <b>What is Salesforce </b><br/>
 - https://www.salesforce.com/products/what-is-salesforce/ <br/>
 
