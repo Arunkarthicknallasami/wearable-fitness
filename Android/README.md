@@ -60,15 +60,6 @@ Clone the repo without fetching the submodule, while username and password are i
 
 # References:
 
-<b>Salesforce Mobile SDK (news and update)</b>
-- https://developer.salesforce.com/page/Mobile <br/>
-
-<b>Salesforce SDK for Android</b>
-- https://github.com/forcedotcom/SalesforceMobileSDK-Android <br/>
-
-<b>Disabling TLS 1.0: Preparing Mobile SDK Apps for the Big Change</b>
-- https://developer.salesforce.com/blogs/engineering/2016/03/disabling-tls-1-0-preparing-mobile-sdk-apps-big-change.html <br/>
-
 <b>Google Fit API</b>
 - https://developers.google.com/fit/android/?hl=zh-TW <br/>
 - https://developers.google.com/fit/android/get-started?hl=zh-TW#step_5_connect_to_the_fitness_service <br/>
@@ -79,8 +70,22 @@ Clone the repo without fetching the submodule, while username and password are i
 - https://developers.google.com/android/guides/api-client#access_the_wearable_api <br/>
 - https://support.google.com/fit/?hl=en#6075067  
 
-<b>Firebase Cloud Messaging (FCM)</b>
-- https://developers.google.com/cloud-messaging/android/android-migrate-fcm <br/>
+<br/>
+
+<b>Facebook Mobile SDK for Android</b>
+-  https://developers.facebook.com/quickstarts/ <br/>
+-  https://developers.facebook.com/docs/facebook-login/permissions/#reference-public_profile <br/>
+-  https://developers.facebook.com/docs/facebook-login/access-tokens <br/>
+-  https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension <br/>
+-  https://developers.facebook.com/apps/ <br/>
+-  https://developers.facebook.com/docs/facebook-login/android <br/>
+-  https://developers.facebook.com/docs/facebook-login/android/accesstokens <br/>
+-  https://developers.facebook.com/docs/facebook-login/android/permissions <br/>
+-  https://developers.facebook.com/docs/android/graph <br/>
+-  https://developers.facebook.com/docs/reference/android/current/class/GraphRequest/ <br/>
+-  https://developers.facebook.com/tools/explorer <br/>
+
+<br/>
 
 <b>Push Notification for Wearable</b>
 - https://developer.android.com/wear/index.html <br/>
@@ -91,6 +96,13 @@ Clone the repo without fetching the submodule, while username and password are i
 - http://android-developers.blogspot.hk/2016/07/android-wear-20-developer-preview-2.html <br/>
 - https://developer.android.com/wear/preview/features/notifications.html <br/>
 - http://www.samsung.com/us/support/answer/ANS00032965/ <br/>
+
+<br/>
+
+<b>Firebase Cloud Messaging (FCM)</b>
+- https://developers.google.com/cloud-messaging/android/android-migrate-fcm <br/>
+
+<br/>
 
 <b>Samsung S-Health SDK</b>
 - http://shealth.samsung.com/ <br/>
