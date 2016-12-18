@@ -41,7 +41,7 @@ sudo curl -L https://get.rvm.io | bash -s stable --ruby
 <i>pod update --verbose</i><br/>
 <i>pod install --verbose</i> <br/>
 
-12. Upgrade of Cocoapods to beta version <br/>
+13. Upgrade of Cocoapods to beta version <br/>
 <i>sudo gem uninstall cocoapods</i> <br/>
 <i>sudo gem uninstall cocoapods-core</i> <br/>
 <i>gem install cocoapods --pre</i> <br/>
@@ -53,7 +53,35 @@ sudo curl -L https://get.rvm.io | bash -s stable --ruby
 
 <br/>
 
-#References:
+# Use Xcodebuild command for deployment
+
+1. modify the signing identity in Xcode or directly modifying the project.pbxproj (not recommended), may also need to modify the plist or entitlements file <br/> 
+
+2. Path to the root level of the project folder <br/>
+
+3. use system default RVM <br/>
+rvm use system <br/>
+
+4. verify ruby version <br/>
+ruby version - ruby 2.0.0p648 (2015-12-16 revision 53162) [universal.x86_64-darwin15] <br/>
+see: http://stackoverflow.com/questions/33041109/xcodebuild-no-applicable-devices-found-when-exporting-archive <br/>
+ruby -v
+
+5. verify xcodebuild command-line, version may different depends on the Xcode.app installed <br/>
+xcodebuild -version <br/>
+
+6. clean the project <br/>
+xcodebuild clean <br/>
+
+7. build an archive with xcodebuild archive, use -verbose for extended logging (cannot un-check finding implicit dependencies) <br/>
+xcodebuild -verbose -workspace ./XXX.xcworkspace -scheme XXX -configuration AppStoreDistribution archive -archivePath ./build/XXX <br/>
+
+8. create the .ipa with xcodebuild -exportArchive <br/>
+xcodebuild -exportArchive -archivePath ./build/XXX.xcarchive  -exportOptionsPlist ./export/exportOptions.plist -exportPath ./build/export/ <br/>
+
+# Use fastlane for deployment
+
+# References:
 
 <b>CocoaPods</b> <br/>
 - https://cocoapods.org/#get_started <br/>
@@ -72,7 +100,13 @@ sudo curl -L https://get.rvm.io | bash -s stable --ruby
 - https://github.com/apple/swift-evolution <br/>
 - https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md <br/>
 
-<br/>
+<b>WatchKit</b> <br/>
+- https://developer.apple.com/library/content/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html?utm_source=designernews <br/>
+- https://developer.apple.com/reference/watchconnectivity/wcsession <br/>
+- https://developer.apple.com/reference/watchkit/wkextensiondelegate <br/>
+
+<b>HealthKit</b> <br/>
+- https://developer.apple.com/reference/healthkit <br/>
 
 <br/>
 
