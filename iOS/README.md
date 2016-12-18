@@ -55,6 +55,23 @@ sudo curl -L https://get.rvm.io | bash -s stable --ruby
 
 # Use fastlane for deployment
 
+1. use ruby version ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14] <br/>
+ruby -v <br/>
+
+2. install missing gems <br/>
+bundle install <br/>
+
+3. update the necessary components to obtain latest patches for stability <br/>
+bundle update gym <br/>
+bundle update fastlane <br/>
+
+4. may need to re-install some gems <br/>
+gem uninstall fastlane <br/>
+gem uninstall gym <br/>
+
+5. use fastlane to build <br/>
+bundle exec fastlane ios deploy <br/>
+
 <br/> <br/>
 
 # Use Xcodebuild command for deployment
