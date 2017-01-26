@@ -26,7 +26,10 @@
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	
+
+    <!-- TODO this is for temporary testing with MobileTech SIT server which does not have proper SSL load -->
+    <!-- MUST BE REMOVED from PRODUCTION -->
+    <!-- disable ATS if website SSL is in proper settings
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>
@@ -35,8 +38,7 @@
         <true/>
         <key>NSExceptionDomains</key>
         <dict>
-            <!-- TODO this is for temporary testing with MobileTech SIT server which does not have proper SSL load -->
-            <!-- MUST BE REMOVED from PRODUCTION -->
+
             <key>demo.mobiletech.com.hk</key>
             <dict>
                 <key>NSExceptionRequiresForwardSecrecy</key>
@@ -50,7 +52,7 @@
             </dict>
         </dict>
     </dict>
-    
+    -->
     
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

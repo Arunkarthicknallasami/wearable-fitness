@@ -62,9 +62,10 @@ UIWebView *webView;
     // need to do this every time this view appears so that the "home" link keeps working
     //[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com.hk"]]];
     
+    // Move Payment Gateway
+    //[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.mpaymall.com/MPayMobi/MerchantPay.jsp"]]];
     // Move Webcart
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.mpaymall.com/MPayMobi/MerchantPay.jsp"]]];
-    //[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://hkonlinemall.com/hkonlinemall-web/manulife/index.jsp?devicetype=ios&language=en&rewardid=3&promoclass=4&ownername=MOVE103&deliverymethod=S&macauind=0&promocode=QH2QT72DXF&dob=0101&skey=f0ea2a86-9735-4a4a-963f-b001dbcac3dadserwjr"]]];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.hkonlinemall.com/hkonlinemall-web/manulife/index.jsp?language=en&devicetype=ios&rewardid=2&promoclass=4&macauind=N&ownername=Tai%20Man%20Chan&deliverymethod=C&promocode=SYJ6BPJW4V"]]];
 }
 
 - (void)didReceiveMemoryWarning {
