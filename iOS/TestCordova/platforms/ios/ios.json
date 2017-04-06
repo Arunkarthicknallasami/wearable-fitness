@@ -1,0 +1,47 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"TestSwiftPlugin\"><param name=\"ios-package\" value=\"TestSwiftPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.jeffrey.mobile.cordova"
+        },
+        "cordova-plugin-add-swift-support": {
+            "PACKAGE_NAME": "com.jeffrey.mobile.cordova"
+        },
+        "com-manulife-core-testswiftplugin": {
+            "PACKAGE_NAME": "com.jeffrey.mobile.cordova"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "com-manulife-core-testswiftplugin.TestSwiftPlugin",
+            "file": "plugins/com-manulife-core-testswiftplugin/www/TestSwiftPlugin.js",
+            "pluginId": "com-manulife-core-testswiftplugin",
+            "clobbers": [
+                "cordova.plugins.TestSwiftPlugin"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.2",
+        "cordova-plugin-add-swift-support": "1.6.2",
+        "com-manulife-core-testswiftplugin": "0.0.1"
+    }
+}

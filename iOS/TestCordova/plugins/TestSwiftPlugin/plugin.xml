@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-manulife-core-testswiftplugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>TestSwiftPlugin</name>
+    <js-module name="TestSwiftPlugin" src="www/TestSwiftPlugin.js">
+        <!-- Used to specify the namespace exposed to external javascript caller -->
+        <clobbers target="cordova.plugins.TestSwiftPlugin" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+           <!-- The feature's name attribute should match what you specify as the JavaScript exec call's service parameter -->
+           <feature name="TestSwiftPlugin">
+             <!-- The value attribute should match the name of the plugin's Swift class -->
+             <param name="ios-package" value="TestSwiftPlugin" />
+           </feature>
+       </config-file>
+       <!-- The relative path of the Swift plugin source code -->
+       <source-file src="src/ios/TestSwiftPlugin.swift" />
+     </platform>
+</plugin>
