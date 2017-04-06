@@ -24,7 +24,10 @@ public class TimerTaskAction {
         
         let isRunningForeground:Bool = UIApplication.shared.applicationState == UIApplicationState.active
         
-        if (isRunningForeground) { // task will be killed immediately in real-device with no chance of survival under iOS 9.3.x
+        if (isRunningForeground) {
+            // task will be killed immediately in real-device with no chance of survival under iOS 9.3.1
+            // no longer an issue in iOS 9.3.5
+            
             print("@@@ perform... id: \(identifier)")
             
             // do some very light-weight work here
@@ -33,14 +36,6 @@ public class TimerTaskAction {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: identifier), object: nil)
             
         } else {
-            ///
-            /// The maximum mount of time the app has to run in the background before it may be forcibly 
-            /// killed by the system is 180 seconds, to enable it the app starts one or more long-running 
-            /// tasks using the beginBackgroundTask(expirationHandler:) method and then transitions to the 
-            /// background
-            ///
-            /// See: AppDelegate - applicationDidEnterBackground
-            ///
             if (UIApplication.shared.backgroundTimeRemaining == DBL_MAX) {
                 print("un-determined...")
             } else {

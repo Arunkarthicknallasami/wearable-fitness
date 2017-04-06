@@ -31,7 +31,8 @@ public class CustomReachability {
     
     static let semaphore = DispatchSemaphore( value: 0 )
     
-    static let HOST : String = "https://hkmvdevd3-manulife-hongkong-community.cs31.force.com"
+    //static let HOST : String = "https://hkmvdevd3-manulife-hongkong-community.cs31.force.com"
+    static let HOST : String = "hkmvdevd3-manulife-hongkong-community.cs31.force.com/move3"
     //static let HOST : String = "https://www.manulifemove.hk"
     
     /**
@@ -70,7 +71,9 @@ public class CustomReachability {
     class func isConnectedToInternet()->Bool {
         var result:Bool = false
         
-        var request = URLRequest(url: URL(string: CustomReachability.HOST)!)
+        let url = URL(string: "https://" + CustomReachability.HOST)
+        
+        var request = URLRequest(url: url!)
         request.httpMethod = "GET"
         request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData
         request.timeoutInterval = 3.0

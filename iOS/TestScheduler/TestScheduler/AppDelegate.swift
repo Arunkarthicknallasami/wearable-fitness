@@ -9,7 +9,7 @@
 //  1. first to create a Timer task which runs itself periodically
 //  2. the task will check for any outstanding job and post event to NotificationCenter
 //  3. an observer monitoring the event will then execute the outstanding job
-//  4. keep the app survival for a small amount of time (180s) to allow the completion of job in progress
+//  4. keep the task survival for a small amount of time (180s) to allow the completion of job in progress
 //  5. wake the app periodicially from background using background fetch to run the job
 //
 //  Refereces:
@@ -21,6 +21,7 @@
 //  Background App Refresh:
 //  https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html
 //  https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW56
+//  https://developer.apple.com/reference/uikit/uiapplication/1623029-backgroundtimeremaining
 //  https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623125-application
 //  https://blog.newrelic.com/2016/01/13/ios9-background-execution/
 //  http://stackoverflow.com/questions/9220494/how-do-i-make-my-app-run-an-nstimer-in-the-background/9623490#9623490
@@ -58,8 +59,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let result1:Bool = SchedulerService.shared.createTask(identifier: "test-id-1")
         print("--> task creation result: \(result1)");
         
-        let result2:Bool = SchedulerService.shared.createTask(identifier: "test-id-2")
-        print("--> task creation result: \(result2)");
+//        let result2:Bool = SchedulerService.shared.createTask(identifier: "test-id-2")
+//        print("--> task creation result: \(result2)");
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -73,11 +74,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         print("--> applicationDidEnterBackground - \(UIApplication.shared.applicationState.rawValue)")
         
-        let result1:Bool = SchedulerService.shared.destroyTask(identifier: "test-id-1")
-        print("--> task detroy result: \(result1)");
+//        let result1:Bool = SchedulerService.shared.destroyTask(identifier: "test-id-1")
+//        print("--> task detroy result: \(result1)");
 
-        let result2:Bool = SchedulerService.shared.destroyTask(identifier: "test-id-2")
-        print("--> task detroy result: \(result2)");
+//        let result2:Bool = SchedulerService.shared.destroyTask(identifier: "test-id-2")
+//        print("--> task detroy result: \(result2)");
         
         // keep the app survival in background to complete some long running task (only have at most 180s to complete the work)
         backgroundTask = UIApplication.shared.beginBackgroundTask(expirationHandler: {
@@ -86,6 +87,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UIApplication.shared.endBackgroundTask(self.backgroundTask!)
             self.backgroundTask = UIBackgroundTaskInvalid
+            
+            print("--> Background task expired!")
         })
         
         // Start the long-running task and return immediately (only have at most 180s to complete the work)
@@ -110,6 +113,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
+        // 
+        
         print("--> performFetchWithCompletionHandler");
         
         // do some work then invoke the completion handler
