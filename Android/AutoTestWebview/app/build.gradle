@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion rootProject.buildToolsVersion
+    defaultConfig {
+        applicationId "testwebview.jeffrey.com.autotestwebview"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    /*******************************
+     * All android support library
+     ******************************/
+    compile 'com.android.support:appcompat-v7:' + rootProject.supportLibVersion
+
+    /*******************************
+     * All test library
+     ******************************/
+    testCompile 'junit:junit:4.12'
+    // the support library version must be the same as the compile SDK version
+    androidTestCompile 'com.android.support:support-annotations:' + rootProject.supportLibVersion
+    // Android JUnit Runner
+    androidTestCompile 'com.android.support.test:runner:' + rootProject.runnerVersion
+    // Set this dependency to use JUnit 4 rules
+    androidTestCompile 'com.android.support.test:rules:' + rootProject.rulesVersion
+    // Set this dependency to build and run Espresso tests
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:' + rootProject.espressoVersion
+    // Set this dependency to build and run Espresso tests on WebView
+    androidTestCompile 'com.android.support.test.espresso:espresso-web:' + rootProject.espressoVersion
+    // Set this dependency to build and run UI Automator tests
+    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+
+    /****************************************************************
+     * Module dependency to Git source repository using sub-module
+     ***************************************************************/
+
+    /**********************************************
+     * All the other dependencies definition here
+     *********************************************/
+    // google core libraries for java, don't use 21.0 cause it need java 8
+    compile 'com.google.guava:guava:20.0'
+}
