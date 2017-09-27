@@ -147,13 +147,13 @@ class TestSwift3Tests: XCTestCase {
         let dateStringFormatter = DateFormatter()
         dateStringFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
-//        print("local timezone: \(TimeZone(secondsFromGMT: 8)?.abbreviation())")
-//        dateStringFormatter.timeZone = TimeZone(secondsFromGMT: 8) // force the timezone to GMT+8
+        print("local timezone: \(TimeZone(secondsFromGMT: 8)?.abbreviation())")
+        dateStringFormatter.timeZone = TimeZone(secondsFromGMT: 8) // force the timezone to GMT+8
         
 //        print("local timezone: \(NSTimeZone.local.abbreviation())")
 //        dateStringFormatter.timeZone = TimeZone(abbreviation: NSTimeZone.local.abbreviation()!)
         
-        dateStringFormatter.locale = NSLocale.init(localeIdentifier: "zh_Hant_HK") as Locale!
+        //dateStringFormatter.locale = NSLocale.init(localeIdentifier: "zh_Hant_HK") as Locale!
         
         let outputDate:Date = dateStringFormatter.date(from: dateString)!
         print("output: \(outputDate)")

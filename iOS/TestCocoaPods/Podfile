@@ -5,10 +5,12 @@
 target 'TestCocoaPods' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
-  
-  # Pods for TestCocoaPods
+
   pod 'ZipArchive', '~> 1.4.0'
-  
+  pod 'SQLCipher', '~> 3.4.0'
+
+  # Pods for TestCocoaPods
+
   target 'TestCocoaPodsTests' do
     inherit! :search_paths
     # Pods for testing
