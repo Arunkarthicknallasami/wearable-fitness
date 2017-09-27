@@ -1,0 +1,3 @@
+[submodule "Android/TestSalesforce/libs/salesforce-mobile-sdk"]
+	path = Android/TestSalesforce/libs/salesforce-mobile-sdk
+	url = https://git.ap.manulife.com/scm/rmf/salesforcemobilesdk-android.git
