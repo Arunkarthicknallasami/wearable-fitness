@@ -14,6 +14,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import static testwebview.jeffrey.com.testwebview.R.id.webView;
+
 public class MainActivity extends AppCompatActivity {
 
     private WebView webview;
@@ -24,20 +26,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        webview = (WebView) findViewById(R.id.webView);
+        webview = (WebView) findViewById(webView);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         getWebviewVersionInfo();
         enabledRemoteDebugging();
         configureWebview();
 
-        final String url = "http://www.hkonlinemall.com/hkonlinemall-web/manulife/index.jsp?devicetype=android&language=en&rewardid=MOVE0001&promoclass=3&macauind=&ownername=JUN%20JUNJUN&deliverymethod=C&promocode=MYTWKQT2T7&dob=0603&skey=f0ea2a86-9735-4a4a-963f-b001dbcac3dadserwjr";
+        //final String url = "http://www.hkonlinemall.com/hkonlinemall-web/manulife/index.jsp?devicetype=android&language=en&rewardid=MOVE0001&promoclass=3&macauind=&ownername=JUN%20JUNJUN&deliverymethod=C&promocode=MYTWKQT2T7&dob=0603&skey=f0ea2a86-9735-4a4a-963f-b001dbcac3dadserwjr";
         //final String url = "http://www.hkonlinemall.com/hkonlinemall-web/manulife/index.jsp?devicetype=android&language=en&rewardid=3&promoclass=4&ownername=MOVE%20103&deliverymethod=S&macauind=0&promocode=QH2QT72DXF&dob=0101&skey=f0ea2a86-9735-4a4a-963f-b001dbcac3dadserwjr";
         //final String url = "http://www.hkonlinemall.com/";
+
+        //Original Azure
+        //final String url = "https://login.microsoftonline.com/AZAPMOVB2CTNT01.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_signin&client_id=7d98d073-8fa8-487d-bb9b-303b33be6f6d&nonce=defaultNonce&redirect_uri=https%3A%2F%2Fmove-msal-service.apps.ext.eas.pcf.manulife.com%2Fauth%2Fmsal&scope=openid&response_type=id_token&prompt=login";
+
+        //Move Customized
+        //final String url = "https://login.microsoftonline.com/AZAPMOVB2CTNT01.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_move&client_id=7d98d073-8fa8-487d-bb9b-303b33be6f6d&nonce=defaultNonce&redirect_uri=https%3A%2F%2Fmove-msal-service.apps.ext.eas.pcf.manulife.com%2Fauth%2Fmsal&scope=openid&response_type=id_token&prompt=login";
+
+        //final String url = "https://mymove.manulifemove.hk/move3/move_page#/move_login";
+
+        //final String url = "https://login.salesforce.com";
+
+        final String url = "https://login.microsoft.com";
+
+        //final String url = "file:///android_asset/test.html";
+
         webview.loadUrl(url);
     }
 
     protected void configureWebview() {
+        webview.setInitialScale(470); // enforce mobile site if website does not set viewport
+        //webview.setVerticalScrollBarEnabled(true);
+
         webview.getSettings().setJavaScriptEnabled(true);
         webview.getSettings().setDomStorageEnabled(true);
         webview.getSettings().setAllowContentAccess(true);
@@ -45,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
         webview.getSettings().setSaveFormData(false);
         webview.getSettings().setAppCacheEnabled(true);
         webview.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
-        webview.setVerticalScrollBarEnabled(true);
 
         webview.setWebViewClient(new WebViewClient() {
             @Override

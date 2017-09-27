@@ -26,7 +26,9 @@ android {
 
 dependencies {
     // Module dependency
-    compile project(':SalesforceSDK')
+    compile project(':libs:SalesforceSDK')
+    compile project(':libs:SmartStore')
+    compile project(':libs:SmartSync')
 
     testCompile 'junit:junit:4.12'
 

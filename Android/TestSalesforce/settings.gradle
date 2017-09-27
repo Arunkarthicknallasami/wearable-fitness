@@ -1,11 +1,11 @@
 // dependencies to external project source (which must be a gradle-based android library project)
-include 'SalesforceSDK'
-project(':SalesforceSDK').projectDir = new File('/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SalesforceSDK')
+include ":libs:SalesforceSDK"
+project(':libs:SalesforceSDK').projectDir = new File('libs/salesforce-mobile-sdk/libs/SalesforceSDK')
 
-include 'SmartStore'
-project(':SmartStore').projectDir = new File('/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartStore')
+include ":libs:SmartStore"
+project(':libs:SmartStore').projectDir = new File('libs/salesforce-mobile-sdk/libs/SmartStore')
 
-include 'SmartSync'
-project(':SmartSync').projectDir = new File('/Users/jeffrey/Development/Android/android_studio_workspace_manulife/SalesforceMobileSDK-Android/libs/SmartSync')
+include ":libs:SmartSync"
+project(':libs:SmartSync').projectDir = new File('libs/salesforce-mobile-sdk/libs/SmartSync')
 
 include ':app'

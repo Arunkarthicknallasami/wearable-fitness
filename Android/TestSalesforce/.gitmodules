@@ -1,0 +1,2 @@
+[submodule "libs/salesforce-mobile-sdk"]
+	branch = master

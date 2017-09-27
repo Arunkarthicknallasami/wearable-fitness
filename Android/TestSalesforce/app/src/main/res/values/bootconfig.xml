@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
+    <!--
     <string name="remoteAccessConsumerKey">3MVG9Se4BnchkASmtngzNh_R0lXGBX5x4_n33M0pa2xSxltXB8hF3GU5vC7SwMYXUXtxnzcLDYzMDUhkur.fg</string>
     <string name="oauthRedirectURI">http://localhost/oauthcallback.html</string>
     <string-array name="oauthScopes">
         <item>api</item>
     </string-array>
     <string name="androidPushNotificationClientId">535521259546</string>
+    -->
+
+    <string name="remoteAccessConsumerKey">3MVG9ZL0ppGP5UrA8Ome44F64wrKkfn3ox3hazIAAdMS4srxW8EQgK.WBK_QgVIUrR9yFEj.PdA027OHpLeR6</string>
+    <string name="oauthRedirectURI">mysampleapp://auth/success</string>
+    <string-array name="oauthScopes">
+        <item>api</item>
+    </string-array>
 </resources>
