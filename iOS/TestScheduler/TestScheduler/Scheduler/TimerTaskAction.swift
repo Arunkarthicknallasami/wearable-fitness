@@ -31,6 +31,7 @@ public class TimerTaskAction {
             print("@@@ perform... id: \(identifier)")
             
             // do some very light-weight work here
+            //LocalNotificationManager.shared.createNotification()
             
             // post event to the designated identifier
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: identifier), object: nil)
@@ -39,9 +40,16 @@ public class TimerTaskAction {
             if (UIApplication.shared.backgroundTimeRemaining == DBL_MAX) {
                 print("un-determined...")
             } else {
+                /*
+                 Have a total of 180s for executing tasks for each time the app goes into background,
+                 once 180s is reached no more work can be executed by the Timer task.
+                 The budget will be reset to 180s if when the app resumes to foreground
+                */
+                
                 print("@@@ perform... id:\(identifier) ,time remains: \(UIApplication.shared.backgroundTimeRemaining)")
                 
                 // do some very light-weight work here
+                //LocalNotificationManager.shared.createNotification()
                 
                 // post event to the designated identifier
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: identifier), object: nil)

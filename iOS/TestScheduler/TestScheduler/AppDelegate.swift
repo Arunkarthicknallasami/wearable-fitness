@@ -56,8 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         print("--> applicationDidBecomeActive - \(UIApplication.shared.applicationState.rawValue)")
 
-        let result1:Bool = SchedulerService.shared.createTask(identifier: "test-id-1")
-        print("--> task creation result: \(result1)");
+        LocalNotificationManager.shared.requestForPushAuthorization()
+        
+//        let result1:Bool = SchedulerService.shared.createTask(identifier: "test-id-1")
+//        print("--> task creation result: \(result1)");
         
 //        let result2:Bool = SchedulerService.shared.createTask(identifier: "test-id-2")
 //        print("--> task creation result: \(result2)");
@@ -93,11 +95,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Start the long-running task and return immediately (only have at most 180s to complete the work)
         // Move to a background thread to do some long running work
-//        DispatchQueue.main.async( execute: {
-//            // Do the work associated with the task, preferably in chunks.
-//            print("Async")
-//            self.timerTask = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
-//        })
+        DispatchQueue.main.async( execute: {
+            // Do the work associated with the task, preferably in chunks.
+            print("Async")
+            let result1:Bool = SchedulerService.shared.createTask(identifier: "test-id-1")
+            print("--> task creation result: \(result1)");
+        })
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -106,20 +109,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
+        // this function will get called only when Background Modes is enabled in App's Capabilities
+        // (background fetch is not necessary)
+        
+        // schedule a local notification that happens in future
+        LocalNotificationManager.shared.createNotification()
+        
+        // give a little break for the tasks ahead to be executed before iOS swap the app's process away from memory
+        sleep(5)
+        
         print("--> applicationWillTerminate - \(UIApplication.shared.applicationState.rawValue)")
     }
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
-        // 
-        
+        // use the iOS Background Fetch feature where we can specify minimum background fetch interval. But actual interval between successive invocation of the code will be determined by iOS framework, out of control from the hands of developer
         print("--> performFetchWithCompletionHandler");
         
         // do some work then invoke the completion handler
         completionHandler(UIBackgroundFetchResult.newData)
     }
-
+    
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        // Called when Local Notification is received while the application is active and running in the foreground
+        print("--> didReceive UILocalNotification - \(UIApplication.shared.applicationState.rawValue)")
+        
+        LocalNotificationManager.shared.createAlert()
+    }
+    
 }
 
