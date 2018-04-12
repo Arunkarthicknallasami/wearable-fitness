@@ -1,5 +1,6 @@
 package testwebview.jeffrey.com.testwebview;
 
+import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -9,6 +10,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -18,7 +21,7 @@ import static testwebview.jeffrey.com.testwebview.R.id.webView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private WebView webview;
+    private CustomWebView webview;
     private ProgressBar progressBar;
 
     @Override
@@ -26,8 +29,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        webview = (WebView) findViewById(webView);
+        webview = (CustomWebView) findViewById(webView);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.INVISIBLE);
 
         getWebviewVersionInfo();
         enabledRemoteDebugging();
@@ -47,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
         //final String url = "https://login.salesforce.com";
 
-        final String url = "https://login.microsoft.com";
+        //final String url = "https://login.microsoft.com";
 
-        //final String url = "file:///android_asset/test.html";
+        final String url = "file:///android_asset/test.html";
 
         webview.loadUrl(url);
     }
@@ -80,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
+            public WebResourceResponse shouldInterceptRequest(WebView webView, WebResourceRequest request) {
+                return super.shouldInterceptRequest(webView, request);
+            }
+
+            @Override
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 super.onReceivedError(view, errorCode, description, failingUrl);
             }
@@ -87,13 +96,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageStarted(final WebView view, final String url, final Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-                progressBar.setVisibility(View.VISIBLE);
+//                progressBar.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onPageFinished(final WebView view, final String url) {
                 super.onPageFinished(view, url);
-                progressBar.setVisibility(View.INVISIBLE);
+//                progressBar.setVisibility(View.INVISIBLE);
             }
         });
     }

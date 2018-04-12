@@ -1,18 +1,55 @@
 <html>
 
 <head>
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+
+    <script type="text/javascript">
+    function testPost() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+                if (xmlhttp.status == 200) {
+                    console.log('response: ' + xmlhttp.responseText);
+                }
+                else if (xmlhttp.status == 400) {
+                    console.log('There was an error 400');
+                }
+                else {
+                    console.log('something else other than 200 was returned: ' + xmlhttp.status);
+                }
+            }
+        };
+        // to fire request from emulator to restful service hosted in localhost machine, use http://10.0.2.2:8080
+        xmlhttp.open("POST", "http://10.0.2.2:8080/web/services/greeting4", true);
+        xmlhttp.setRequestHeader("Content-Type", "application/json");
+        xmlhttp.send(JSON.stringify({test:"abc"}));
+    }
+
+    function testGet() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+                if (xmlhttp.status == 200) {
+                    console.log('response: ' + xmlhttp.responseText);
+                }
+                else if (xmlhttp.status == 400) {
+                    console.log('There was an error 400');
+                }
+                else {
+                    console.log('something else other than 200 was returned: ' + xmlhttp.status);
+                }
+            }
+        };
+        xmlhttp.open("GET", "http://10.0.2.2:8080/web/services/greeting2", true);
+        xmlhttp.send();
+    }
+    </script>
 </head>
 
 <body>
-    <div>
-        <h1>TEST</h1>
-        <br/><br/>
-        <input type="text" value="MOVE ID"></input>
-        <br/><br/>
-        <input type="text" value="PASSWORD"></input>
-        <br/><br/>
-    </div>
+    <input type="button" value="test POST" onClick="javascript:testPost()"> <br/>
+    <input type="button" value="test GET" onClick="javascript:testGet()"> <br/>
 </body>
 
 </html>
