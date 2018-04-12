@@ -23,7 +23,6 @@
         // to fire request from emulator to restful service hosted in localhost machine, use http://10.0.2.2:8080
         xmlhttp.open("POST", "http://10.0.2.2:8080/web/services/greeting4", true);
         xmlhttp.setRequestHeader("Content-Type", "application/json");
-        //xmlhttp.setRequestHeader("method", "post");
         xmlhttp.send(JSON.stringify({test:"abc"}));
     }
 
