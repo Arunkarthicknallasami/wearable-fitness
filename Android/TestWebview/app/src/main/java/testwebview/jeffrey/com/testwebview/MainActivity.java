@@ -1,6 +1,5 @@
 package testwebview.jeffrey.com.testwebview;
 
-import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -17,12 +16,20 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TimeZone;
+
 import static testwebview.jeffrey.com.testwebview.R.id.webView;
 
 public class MainActivity extends AppCompatActivity {
 
     private CustomWebView webview;
     private ProgressBar progressBar;
+
+    private CustomJsBridge jsBridge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,21 +77,46 @@ public class MainActivity extends AppCompatActivity {
         webview.getSettings().setAppCacheEnabled(true);
         webview.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
 
+        // configure JS interface
+        jsBridge = CustomJsBridge.Builder.build(webview);
+        webview.addJavascriptInterface(jsBridge, jsBridge.getName());
+
         webview.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(final WebView webview, final String url) {
                 Log.d("load url: ", url);
 
-                if (url.indexOf("manulifemove://") >= 0) {
-                    webview.loadUrl("javascript:moveCallback()");
-                    return true;
-                }
+//                if (url.indexOf("manulifemove://") >= 0) {
+//                    webview.loadUrl("javascript:moveCallback()");
+//                    return true;
+//                }
 
                 return super.shouldOverrideUrlLoading(webview, url);
             }
 
             @Override
-            public WebResourceResponse shouldInterceptRequest(WebView webView, WebResourceRequest request) {
+            public WebResourceResponse shouldInterceptRequest(final WebView webView, WebResourceRequest request) {
+                // disable CORS for Android Webview by intercepting the preflight request
+                if (request.getMethod().equalsIgnoreCase("OPTIONS")) {
+                    Date date = new Date();
+                    final String dateString = new SimpleDateFormat("dd-MMM-yyyy kk:mm:ss").format(date);
+                    Map<String, String> headers = new HashMap<String, String>() {{
+                        put("Connection", "close");
+                        put("Content-Type", "text/plain");
+                        put("Date", dateString + TimeZone.getDefault().getDisplayName());
+                        put("Access-Control-Allow-Origin", "*"); // allow any domain
+                        put("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, PATCH, OPTIONS"); // allow any method
+                        put("Access-Control-Max-Age", "600");
+                        put("Access-Control-Allow-Credentials", "true");
+                        put("Access-Control-Allow-Headers", "accept, authorization, Content-Type, method"); // allow a list of pre-define custom headers
+                    }};
+                    return new WebResourceResponse("text/plain", "UTF-8", 200, "OK", headers, null);
+                }
+
+                String postData = null;
+                if (request.getMethod().equalsIgnoreCase("POST")) {
+                    postData = jsBridge.getDataFromJs("getData");
+                }
                 return super.shouldInterceptRequest(webView, request);
             }
 
