@@ -1,0 +1,22 @@
+{
+  "name": "TestCocoaPodLib",
+  "version": "0.1.0",
+  "summary": "A short description of TestCocoaPodLib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jeffrey.garcia@gmail.com/TestCocoaPodLib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jeffrey.garcia@gmail.com": "jeffrey_garcia_wong@manulife.com"
+  },
+  "source": {
+    "git": "https://github.com/jeffrey.garcia@gmail.com/TestCocoaPodLib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TestCocoaPodLib/Classes/**/*"
+}
